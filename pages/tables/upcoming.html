@@ -67,31 +67,31 @@ function loadJSON()
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
 
 		document.getElementById("0time_until_live").innerHTML = jsonObj.results[0].time_until_live;
-		document.getElementById("0tourny").innerHTML = jsonObj.results[0].tourny;
+
 	// GAME 1
         document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
         document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
 
 		document.getElementById("1time_until_live").innerHTML = jsonObj.results[1].time_until_live;
-		document.getElementById("1tourny").innerHTML = jsonObj.results[1].tourny;
+
 	// GAME 2
         document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
         document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
 
 		document.getElementById("2time_until_live").innerHTML = jsonObj.results[2].time_until_live;
-		document.getElementById("2tourny").innerHTML = jsonObj.results[2].tourny;
+
 	// GAME 3
         document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
         document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
 
 		document.getElementById("3time_until_live").innerHTML = jsonObj.results[3].time_until_live;
-		document.getElementById("3tourny").innerHTML = jsonObj.results[3].tourny;
+
 	// GAME 4
         document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
         document.getElementById("4team2").innerHTML = jsonObj.results[4].team2;
 
 		document.getElementById("4time_until_live").innerHTML = jsonObj.results[4].time_until_live;
-		document.getElementById("4tourny").innerHTML = jsonObj.results[4].tourny;
+
       }
    }
    http_request.open("GET", data_file, true);
@@ -172,7 +172,6 @@ function loadJSON()
                       <th width="164">Team 1</th>
                       <th width="200">Team 2</th>
                       <th width="158">ETA</th>
-                      <th width="812">Tournament</th>
                       <th width="40" style="width: 40px">Type</th>
                     </tr>
                     <tr>
@@ -180,7 +179,6 @@ function loadJSON()
                       <td><div id="0team1"></td>
                       <td><div id="0team2"></td>
                       <td><div id="0time_until_live"></td>
-                      <td><div id="0tourny"></td>
                       <td><span class="badge bg-red">BO3</span></td>
                     </tr>
                     <tr>
@@ -188,7 +186,6 @@ function loadJSON()
                       <td><div id="1team1"></td>
                       <td><div id="1team2"></td>
                       <td><div id="1time_until_live"></td>
-                      <td><div id="1tourny"></td>
                       <td><span class="badge bg-red">BO3</span></td>
                     </tr>
                     <tr>
@@ -196,7 +193,6 @@ function loadJSON()
                       <td><div id="2team1"></td>
                       <td><div id="2team2"></td>
                       <td><div id="2time_until_live"></td>
-                      <td><div id="2tourny"></td>
                       <td><span class="badge bg-red">BO3</span></td>
                     </tr>
                     <tr>
@@ -204,7 +200,6 @@ function loadJSON()
                       <td><div id="3team1"></td>
                       <td><div id="3team2"></td>
                       <td><div id="3time_until_live"></td>
-                      <td><div id="3tourny"></td>
                       <td><span class="badge bg-red">BO3</span></td>
                     </tr>
                      <tr>
@@ -212,7 +207,6 @@ function loadJSON()
                       <td><div id="4team1"></td>
                       <td><div id="4team2"></td>
                       <td><div id="4time_until_live"></td>
-                      <td><div id="4tourny"></td>
                       <td><span class="badge bg-red">BO3</span></td>
                     </tr>
                   </table>
