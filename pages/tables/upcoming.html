@@ -23,7 +23,12 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+    <style type="text/css">
+<!--
+.style1 {font-size: 36px}
+-->
+    </style>
+</head>
   
   <div class="wrapper">
 
@@ -65,25 +70,21 @@ function loadJSON()
 	// GAME 0
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
-
 		document.getElementById("0time_until_live").innerHTML = jsonObj.results[0].time_until_live;
 
 	// GAME 1
         document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
         document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
-
 		document.getElementById("1time_until_live").innerHTML = jsonObj.results[1].time_until_live;
 
 	// GAME 2
         document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
         document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
-
 		document.getElementById("2time_until_live").innerHTML = jsonObj.results[2].time_until_live;
 
 	// GAME 3
         document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
         document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
-
 		document.getElementById("3time_until_live").innerHTML = jsonObj.results[3].time_until_live;
 
 	// GAME 4
@@ -176,9 +177,9 @@ function loadJSON()
                     </tr>
                     <tr>
 
-                      <td><div id="0team1"></td>
-                      <td><div id="0team2"></td>
-                      <td><div id="0time_until_live"></td>
+                      <td>placeholder</td>
+                      <td>place holder</td>
+                      <td>place holder</td>
                       <td><span class="badge bg-red">BO3</span></td>
                     </tr>
                     <tr>
@@ -212,6 +213,31 @@ function loadJSON()
                   </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
+              
+              <div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="0team1"></h3>  <h3 class="box-title">VS</h3>  <h3 class="box-title"><div id="0team2"></h3></center>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <div align="center" class="style1">11:4</div>
+              <div align="center">Map:
+              de_dust2</div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">ETA<div id="0time_until_live"></div>
+              
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+          
+          
             </div><!-- /.col -->
           </div><!-- /.row -->
           <div class="row">
