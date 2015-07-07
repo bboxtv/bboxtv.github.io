@@ -26,10 +26,8 @@
     <![endif]-->
     <style type="text/css">
 <!--
-.style2 {
-	font-size: 24px;
-	font-weight: bold;
-}
+.style1 {font-size: 36px}
+.style2 {font-size: 24px}
 -->
     </style>
 </head>
@@ -75,51 +73,30 @@ function loadJSON()
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
 		document.getElementById("0time_until_live").innerHTML = jsonObj.results[0].time_until_live;
-		document.getElementById("0time").innerHTML = jsonObj.results[0].time
 		document.getElementById("0tourny").innerHTML = jsonObj.results[0].tourny
-				document.getElementById("0map1").innerHTML = jsonObj.results[0].map1
-				document.getElementById("0map2").innerHTML = jsonObj.results[0].map2
-				document.getElementById("0map3").innerHTML = jsonObj.results[0].map3
+
 
 	// GAME 1
         document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
         document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
 		document.getElementById("1time_until_live").innerHTML = jsonObj.results[1].time_until_live;
-		document.getElementById("1time").innerHTML = jsonObj.results[1].time
-		document.getElementById("1tourny").innerHTML = jsonObj.results[1].tourny
-				document.getElementById("1map1").innerHTML = jsonObj.results[1].map1
-				document.getElementById("1map2").innerHTML = jsonObj.results[1].map2
-				document.getElementById("1map3").innerHTML = jsonObj.results[1].map3
+
 	// GAME 2
         document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
         document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
 		document.getElementById("2time_until_live").innerHTML = jsonObj.results[2].time_until_live;
-		document.getElementById("2time").innerHTML = jsonObj.results[2].time
-		document.getElementById("2tourny").innerHTML = jsonObj.results[2].tourny
-				document.getElementById("2map1").innerHTML = jsonObj.results[2].map1
-				document.getElementById("2map2").innerHTML = jsonObj.results[2].map2
-				document.getElementById("2map3").innerHTML = jsonObj.results[2].map3
 
 	// GAME 3
         document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
         document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
 		document.getElementById("3time_until_live").innerHTML = jsonObj.results[3].time_until_live;
-		document.getElementById("3time").innerHTML = jsonObj.results[3].time
-		document.getElementById("3tourny").innerHTML = jsonObj.results[3].tourny
-				document.getElementById("3map1").innerHTML = jsonObj.results[3].map1
-				document.getElementById("3map2").innerHTML = jsonObj.results[3].map2
-				document.getElementById("3map3").innerHTML = jsonObj.results[3].map3
-				
-				
-// GAME 4
+
+	// GAME 4
         document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
         document.getElementById("4team2").innerHTML = jsonObj.results[4].team2;
+
 		document.getElementById("4time_until_live").innerHTML = jsonObj.results[4].time_until_live;
-		document.getElementById("4time").innerHTML = jsonObj.results[4].time
-		document.getElementById("4tourny").innerHTML = jsonObj.results[4].tourny
-				document.getElementById("4map1").innerHTML = jsonObj.results[4].map1
-				document.getElementById("4map2").innerHTML = jsonObj.results[4].map2
-				document.getElementById("4map3").innerHTML = jsonObj.results[4].map3
+
       }
    }
    http_request.open("GET", data_file, true);
@@ -192,95 +169,133 @@ function loadJSON()
               
               
     <!--card 0 -->
-    
-<div class="box box-default collapsed-box box-solid">
-          <div class="box-header with-border">
-                  <h3 class="box-title"><div id="0team1"></h3> <h3 class="box-title style2">VS</h3> 
-            <h3 class="box-title"><div id="0team2"></h3>
-                  <div class="box-tools pull-right">
-                   <span id="0time_until_live">ETA</span>
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                  </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
-          <div class="box-body">
-                    <div align="center" id="0tourny"></div>
-                     <div align="center" id="0time"></div>
-                    <div align="center"><strong>Maps:</strong> <span align="center" id="0map1">TBA</span>, <span align="center" id="0map2">TBA</span>, <span align="center" id="0map3">TBA</span>                    </div>
-                </div><!-- /.box-body -->
+<div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="0team1"></h3>  <strong>VS</strong> <h3 class="box-title"><div id="0team2"></h3></center>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
-    
+            </div>
+            <div class="box-body">
+            <center><h5 class="box-title"><div id="0tourny"></h5>
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <div align="center" class="style1">11:4</div>
+
+              
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">ETA<div id="0time_until_live"></div>
+              
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+          
+          
   <!--card 1 -->    
  
- <div class="box box-default collapsed-box box-solid">
-          <div class="box-header with-border">
-                  <h3 class="box-title"><div id="1team1"></h3> <h3 class="box-title style2">VS</h3> 
-            <h3 class="box-title"><div id="1team2"></h3>
-                  <div class="box-tools pull-right">
-                   <span id="1time_until_live">ETA</span>
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                  </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
-          <div class="box-body">
-                    <div align="center" id="1tourny"></div>
-                     <div align="center" id="1time"></div>
-                    <div align="center"><strong>Maps:</strong> <span align="center" id="1map1">TBA</span>, <span align="center" id="1map2">TBA</span>, <span align="center" id="1map3">TBA</span>                    </div>
-                </div><!-- /.box-body -->
+ <div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="1team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="1team2"></h3></center>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
+            </div>
+            <div class="box-body">
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <div align="center" class="style1">0:0</div>
+              <div align="center">Map:
+              TBA</div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">ETA<div id="1time_until_live"></div>
+              
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
           
           
    <!--card 2 -->    
  
- <div class="box box-default collapsed-box box-solid">
-          <div class="box-header with-border">
-                  <h3 class="box-title"><div id="2team1"></h3> <h3 class="box-title style2">VS</h3> 
-            <h3 class="box-title"><div id="2team2"></h3>
-                  <div class="box-tools pull-right">
-                   <span id="2time_until_live">ETA</span>
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                  </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
-          <div class="box-body">
-                    <div align="center" id="2tourny"></div>
-                     <div align="center" id="2time"></div>
-                    <div align="center"><strong>Maps:</strong> <span align="center" id="2map1">TBA</span>, <span align="center" id="2map2">TBA</span>, <span align="center" id="2map3">TBA</span>                    </div>
-                </div><!-- /.box-body -->
+ <div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="2team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="2team2"></h3></center>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
+            </div>
+            <div class="box-body">
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <div align="center" class="style1">0:0</div>
+              <div align="center">Map:
+              TBA</div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">ETA<div id="2time_until_live"></div>
+              
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+          
   <!--card 3 -->    
  
- <div class="box box-default collapsed-box box-solid">
-          <div class="box-header with-border">
-                  <h3 class="box-title"><div id="3team1"></h3> <h3 class="box-title style2">VS</h3> 
-            <h3 class="box-title"><div id="3team2"></h3>
-                  <div class="box-tools pull-right">
-                   <span id="3time_until_live">ETA</span>
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                  </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
-          <div class="box-body">
-                    <div align="center" id="3tourny"></div>
-                     <div align="center" id="3time"></div>
-                    <div align="center"><strong>Maps:</strong> <span align="center" id="3map1">TBA</span>, <span align="center" id="3map2">TBA</span>, <span align="center" id="3map3">TBA</span>                    </div>
-                </div><!-- /.box-body -->
+ <div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="3team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="3team2"></h3></center>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
+            </div>
+            <div class="box-body">
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <div align="center" class="style1">0:0</div>
+              <div align="center">Map:
+              TBA</div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">ETA<div id="3time_until_live"></div>
+              
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
           
           
   <!--card 4 -->    
  
- <div class="box box-default collapsed-box box-solid">
-          <div class="box-header with-border">
-                  <h3 class="box-title"><div id="4team1"></h3> <h3 class="box-title style2">VS</h3> 
-            <h3 class="box-title"><div id="4team2"></h3>
-                  <div class="box-tools pull-right">
-                   <span id="4time_until_live">ETA</span>
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                  </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
-          <div class="box-body">
-                    <div align="center" id="4tourny"></div>
-                     <div align="center" id="4time"></div>
-                    <div align="center"><strong>Maps:</strong> <span align="center" id="4map1">TBA</span>, <span align="center" id="4map2">TBA</span>, <span align="center" id="4map3">TBA</span>                    </div>
-                </div><!-- /.box-body -->
+ <div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="4team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="4team2"></h3></center>
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
+            </div>
+          <div class="box-body">
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <div align="center" class="style1">0:0</div>
+              <div align="center">Map:
+              TBA</div>
+          </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">ETA<div id="4time_until_live"></div>
+              
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+          
           
           
                             
