@@ -27,7 +27,7 @@
     <style type="text/css">
 <!--
 .style1 {font-size: 36px}
-.style2 {font-size: 24px}
+.style3 {font-size: 36px; font-weight: bold; }
 -->
     </style>
 </head>
@@ -42,7 +42,7 @@
 <script type="application/javascript">
 function loadJSON()
 {
-   var data_file = "https://api.import.io/store/data/ff7b8354-cec3-44b3-8204-248e07de3c80/_query?input/webpage/url=http%3A%2F%2Fwww.hltv.org%2F%3Fpageid%3D305&_user=71b166e4-3f2d-4e65-bb72-7201cb2c4b25&_apikey=71b166e43f2d4e65bb727201cb2c4b2553b8acda19cd8f18f3c3cb8eff3f721a6878cbcad5d6d0a6f13f2241bac72ddf5ffc8186d987335dcbb4aa29677756e797edfadcc83153d3312fd9017a3fa8c1";
+   var data_file = "https://api.import.io/store/data/84618995-a3b7-4245-98db-7442873f617a/_query?input/webpage/url=http%3A%2F%2Fwww.hltv.org%2F%3Fpageid%3D296&_user=71b166e4-3f2d-4e65-bb72-7201cb2c4b25&_apikey=71b166e43f2d4e65bb727201cb2c4b2553b8acda19cd8f18f3c3cb8eff3f721a6878cbcad5d6d0a6f13f2241bac72ddf5ffc8186d987335dcbb4aa29677756e797edfadcc83153d3312fd9017a3fa8c1";
    var http_request = new XMLHttpRequest();
    try{
       // Opera 8.0+, Firefox, Chrome, Safari
@@ -71,32 +71,56 @@ function loadJSON()
         // be accessed as jsonObj.name and jsonObj.country.
 	// GAME 0
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
-        document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
-		document.getElementById("0time_until_live").innerHTML = jsonObj.results[0].time_until_live;
-		document.getElementById("0tourny").innerHTML = jsonObj.results[0].tourny
+	    document.getElementById("0team2").innerHTML =  jsonObj.results[0].team2;
+ 	    document.getElementById("0team1score").innerHTML =  jsonObj.results[0].team1score;
+        document.getElementById("0team2score").innerHTML =  jsonObj.results[0].team2score;
 
 
 	// GAME 1
         document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
-        document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
-		document.getElementById("1time_until_live").innerHTML = jsonObj.results[1].time_until_live;
+	    document.getElementById("1team2").innerHTML =  jsonObj.results[1].team2;
+ 	    document.getElementById("1team1score").innerHTML =  jsonObj.results[1].team1score;
+        document.getElementById("1team2score").innerHTML =  jsonObj.results[1].team2score;
 
 	// GAME 2
         document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
-        document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
-		document.getElementById("2time_until_live").innerHTML = jsonObj.results[2].time_until_live;
+	    document.getElementById("2team2").innerHTML =  jsonObj.results[2].team2;
+ 	    document.getElementById("2team1score").innerHTML =  jsonObj.results[2].team1score;
+        document.getElementById("2team2score").innerHTML =  jsonObj.results[2].team2score;
 
 	// GAME 3
+
         document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
-        document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
-		document.getElementById("3time_until_live").innerHTML = jsonObj.results[3].time_until_live;
-
+	    document.getElementById("3team2").innerHTML =  jsonObj.results[3].team2;
+ 	    document.getElementById("3team1score").innerHTML =  jsonObj.results[3].team1score;
+        document.getElementById("3team2score").innerHTML =  jsonObj.results[3].team2score;
 	// GAME 4
-        document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
-        document.getElementById("4team2").innerHTML = jsonObj.results[4].team2;
 
-		document.getElementById("4time_until_live").innerHTML = jsonObj.results[4].time_until_live;
+    document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
+	    document.getElementById("4team2").innerHTML =  jsonObj.results[4].team2;
+ 	    document.getElementById("4team1score").innerHTML =  jsonObj.results[4].team1score;
+        document.getElementById("4team2score").innerHTML =  jsonObj.results[4].team2score;
+		
+			// GAME 5
 
+    document.getElementById("5team1").innerHTML =  jsonObj.results[5].team1;
+	    document.getElementById("5team2").innerHTML =  jsonObj.results[5].team2;
+ 	    document.getElementById("5team1score").innerHTML =  jsonObj.results[5].team1score;
+        document.getElementById("5team2score").innerHTML =  jsonObj.results[5].team2score;
+		
+			// GAME 6
+
+    document.getElementById("6team1").innerHTML =  jsonObj.results[6].team1;
+	    document.getElementById("6team2").innerHTML =  jsonObj.results[6].team2;
+ 	    document.getElementById("6team1score").innerHTML =  jsonObj.results[6].team1score;
+        document.getElementById("6team2score").innerHTML =  jsonObj.results[6].team2score;
+		
+					// GAME 7
+
+    document.getElementById("7team1").innerHTML =  jsonObj.results[7].team1;
+	    document.getElementById("7team2").innerHTML =  jsonObj.results[7].team2;
+ 	    document.getElementById("7team1score").innerHTML =  jsonObj.results[7].team1score;
+        document.getElementById("7team2score").innerHTML =  jsonObj.results[7].team2score;
       }
    }
    http_request.open("GET", data_file, true);
@@ -127,19 +151,16 @@ function loadJSON()
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header"></li>
-            <li class="treeview">
-             
-            <li class="treeview">
-             
-            <li class="treeview">
+<li class="treeview">
+<li class="treeview">
+<li class="treeview">
               
               <ul class="treeview-menu">
                
             <li><a href="../../documentation/index.html"><i class="fa fa-book"></i></a></li>
             <li class="header"></li>
-
           </ul>
-      </section>
+</section>
         <!-- /.sidebar -->
       </aside>
 
@@ -148,13 +169,10 @@ function loadJSON()
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Upcoming Matches
-            <small>Matches being played today.</small>
+            Recent Results
+            <small>Matches finalized today.</small>
           </h1>
-          <ol class="breadcrumb">
-            <i class="fa fa-dashboard"></i>  Please note matches completed today will be displayed in the results section.</a></li>
-          </ol>
-        </section>
+          </section>
 
         <!-- Main content -->
         <section class="content">
@@ -169,143 +187,90 @@ function loadJSON()
               
               
     <!--card 0 -->
-<div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="0team1"></h3>  <strong>VS</strong> <h3 class="box-title"><div id="0team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
+    <!--card 1 -->
+    <!--card 2 -->
+    <!--card 3 -->
+    <!--card 4 -->
             </div>
-            <div class="box-body">
-            <center><h5 class="box-title"><div id="0tourny"></h5>
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">11:4</div>
-
-              
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="0time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-  <!--card 1 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="1team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="1team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="1time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-   <!--card 2 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="2team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="2team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="2time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-  <!--card 3 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="3team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="3team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="3time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-  <!--card 4 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="4team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="4team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-          <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-          </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="4time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-          
-                            
-            </div><!-- /.col -->
+            <!-- /.col -->
           </div><!-- /.row -->
           <div class="row">
             <div class="col-xs-12">
               <!-- /.box -->
             </div>
+           
+          
           </div>
+          
+          <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Scorecard</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <table class="table table-striped">
+                    <tr>
+                      <th width="637">Team</th>
+                      <th width="636">Final Score</th>
+                      <th width="93" style="width: 40px"><div align="right">Team</div></th>
+                    </tr>
+                    <tr>
+                 <td> <h3 class="box-title"><div id="0team1">
+                 </h3> </td>
+                 <td><span id="0team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="0team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="0team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+                 <td> <h3 class="box-title"><div id="1team1">
+                 </h3> </td>
+                 <td><span id="1team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="1team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="1team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+				<td> <h3 class="box-title"><div id="2team1">
+				</h3> </td>
+                 <td><span id="2team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="2team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="2team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+				<td> <h3 class="box-title"><div id="3team1">
+				</h3> </td>
+                 <td><span id="3team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="3team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="3team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+				<td> <h3 class="box-title"><div id="4team1">
+				</h3> </td>
+                 <td><span id="4team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="4team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="4team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+				<td> <h3 class="box-title"><div id="5team1">
+				</h3> </td>
+                 <td><span id="5team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="5team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="5team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+				<td> <h3 class="box-title"><div id="6team1">
+				</h3> </td>
+                 <td><span id="6team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="6team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="6team2">
+                 </h3> </td>
+                    </tr>
+                    <tr>
+				<td> <h3 class="box-title"><div id="7team1"></h3> </td>
+                 <td><span id="7team1score" class="badge bg-blue style1">0</span><span class="style3">:</span><span id="7team2score" class="badge bg-blue style1">0</span></td>
+                 <td> <h3 align="right" class="box-title"><div id="7team2">
+                 </h3> </td>
+                    </tr>
+                  </table>
+            </div><!-- /.box-body -->
+              </div>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
@@ -335,8 +300,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
                     <p>Will be 23 on April 24th</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <i class="menu-icon fa fa-user bg-yellow"></i>
@@ -344,8 +308,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
                     <p>New phone +1(800)555-1234</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
@@ -353,8 +316,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
                     <p>nora@example.com</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <i class="menu-icon fa fa-file-code-o bg-green"></i>
@@ -362,8 +324,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
                     <p>Execution time 5 seconds</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
             </ul><!-- /.control-sidebar-menu -->
 
             <h3 class="control-sidebar-heading">Tasks Progress</h3>
@@ -372,46 +333,38 @@ function loadJSON()
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                  </h4>
+                    <span class="label label-danger pull-right">70%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Update Resume
-                    <span class="label label-success pull-right">95%</span>
-                  </h4>
+                    <span class="label label-success pull-right">95%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-success" style="width: 95%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Laravel Integration
-                    <span class="label label-warning pull-right">50%</span>
-                  </h4>
+                    <span class="label label-warning pull-right">50%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Back End Framework
-                    <span class="label label-primary pull-right">68%</span>
-                  </h4>
+                    <span class="label label-primary pull-right">68%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
             </ul><!-- /.control-sidebar-menu -->
 
           </div><!-- /.tab-pane -->

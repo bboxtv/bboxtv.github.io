@@ -27,7 +27,6 @@
     <style type="text/css">
 <!--
 .style1 {font-size: 36px}
-.style2 {font-size: 24px}
 -->
     </style>
 </head>
@@ -42,7 +41,9 @@
 <script type="application/javascript">
 function loadJSON()
 {
-   var data_file = "https://api.import.io/store/data/ff7b8354-cec3-44b3-8204-248e07de3c80/_query?input/webpage/url=http%3A%2F%2Fwww.hltv.org%2F%3Fpageid%3D305&_user=71b166e4-3f2d-4e65-bb72-7201cb2c4b25&_apikey=71b166e43f2d4e65bb727201cb2c4b2553b8acda19cd8f18f3c3cb8eff3f721a6878cbcad5d6d0a6f13f2241bac72ddf5ffc8186d987335dcbb4aa29677756e797edfadcc83153d3312fd9017a3fa8c1";
+   var data_file = "https://api.import.io/store/data/a7610d00-a83a-426b-98af-f7aa0a6d334d/_query?input/webpage/url=http%3A%2F%2Fesportlivescore.com%2Fg_csgo.html&_user=71b166e4-3f2d-4e65-bb72-7201cb2c4b25&_apikey=71b166e43f2d4e65bb727201cb2c4b2553b8acda19cd8f18f3c3cb8eff3f721a6878cbcad5d6d0a6f13f2241bac72ddf5ffc8186d987335dcbb4aa29677756e797edfadcc83153d3312fd9017a3fa8c1";
+
+   
    var http_request = new XMLHttpRequest();
    try{
       // Opera 8.0+, Firefox, Chrome, Safari
@@ -72,30 +73,33 @@ function loadJSON()
 	// GAME 0
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
-		document.getElementById("0time_until_live").innerHTML = jsonObj.results[0].time_until_live;
-		document.getElementById("0tourny").innerHTML = jsonObj.results[0].tourny
-
+        document.getElementById("0team1score").innerHTML = jsonObj.results[0].team1score;
+		document.getElementById("0team2score").innerHTML = jsonObj.results[0].team2score;
+		document.getElementById("0team1map1").innerHTML = jsonObj.results[0].team1map1;
+		document.getElementById("0team2map1").innerHTML = jsonObj.results[0].team2map1;
+		document.getElementById("0team1map2").innerHTML = jsonObj.results[0].team1map2;
+		document.getElementById("0team2map2").innerHTML = jsonObj.results[0].team2map2;
 
 	// GAME 1
         document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
         document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
-		document.getElementById("1time_until_live").innerHTML = jsonObj.results[1].time_until_live;
+		
+
 
 	// GAME 2
         document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
         document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
-		document.getElementById("2time_until_live").innerHTML = jsonObj.results[2].time_until_live;
+
 
 	// GAME 3
         document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
         document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
-		document.getElementById("3time_until_live").innerHTML = jsonObj.results[3].time_until_live;
+
 
 	// GAME 4
         document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
         document.getElementById("4team2").innerHTML = jsonObj.results[4].team2;
 
-		document.getElementById("4time_until_live").innerHTML = jsonObj.results[4].time_until_live;
 
       }
    }
@@ -180,10 +184,11 @@ function loadJSON()
             <center><h5 class="box-title"><div id="0tourny"></h5>
               <div align="center"><span class="badge bg-red">BO3</span>
               </div>
-              <div align="center" class="style1">11:4</div>
-
-              
-            </div>
+              <span align="center" class="style1" id="0team1score">0</span>  <span align="center" class="style1"">:</span>  <span align="center" class="style1" id="0team2score">0</span>
+               <div align="center" class="text"">Maps</div>
+               <strong>Map 1</strong> - <span align="center" class="text" id="0team1map1">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map1">0</span>
+               <strong>Map 2</strong> - <span align="center" class="text" id="0team1map2">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map2">0</span>
+               <strong>Map 3</strong> - <span align="center" class="text" id="0team1map3">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map3">0</span>          </div>
             <!-- /.box-body -->
             <div class="box-footer">
             <div align="center">ETA<div id="0time_until_live"></div>
