@@ -79,28 +79,11 @@ function loadJSON()
 		document.getElementById("0team2map1").innerHTML = jsonObj.results[0].team2map1;
 		document.getElementById("0team1map2").innerHTML = jsonObj.results[0].team1map2;
 		document.getElementById("0team2map2").innerHTML = jsonObj.results[0].team2map2;
+        document.getElementById("0team1map3").innerHTML = jsonObj.results[0].team1map3;
+		document.getElementById("0team2map3").innerHTML = jsonObj.results[0].team2map3;
+		document.getElementById("0eta").innerHTML = jsonObj.results[0].eta;
 
-	// GAME 1
-        document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
-        document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
-		
-
-
-	// GAME 2
-        document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
-        document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
-
-
-	// GAME 3
-        document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
-        document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
-
-
-	// GAME 4
-        document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
-        document.getElementById("4team2").innerHTML = jsonObj.results[4].team2;
-
-
+	
       }
    }
    http_request.open("GET", data_file, true);
@@ -131,19 +114,16 @@ function loadJSON()
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header"></li>
-            <li class="treeview">
-             
-            <li class="treeview">
-             
-            <li class="treeview">
+<li class="treeview">
+<li class="treeview">
+<li class="treeview">
               
               <ul class="treeview-menu">
                
             <li><a href="../../documentation/index.html"><i class="fa fa-book"></i></a></li>
             <li class="header"></li>
-
           </ul>
-      </section>
+</section>
         <!-- /.sidebar -->
       </aside>
 
@@ -152,17 +132,14 @@ function loadJSON()
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Upcoming Matches
-            <small>Matches being played today.</small>
+            Live Scores
+            <small>Matches being played right now.</small>
           </h1>
-          <ol class="breadcrumb">
-            <i class="fa fa-dashboard"></i>  Please note matches completed today will be displayed in the results section.</a></li>
-          </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
-          <div class="row">
+        <div class="row">
             <div class="col-md-6"><!-- /.box -->
               <!-- /.box -->
             </div>
@@ -180,131 +157,42 @@ function loadJSON()
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
             </div>
-            <div class="box-body">
+          <div class="box-body">
             <center><h5 class="box-title"><div id="0tourny"></h5>
               <div align="center"><span class="badge bg-red">BO3</span>
               </div>
-              <span align="center" class="style1" id="0team1score">0</span>  <span align="center" class="style1"">:</span>  <span align="center" class="style1" id="0team2score">0</span>
-               <div align="center" class="text"">Maps</div>
-               <strong>Map 1</strong> - <span align="center" class="text" id="0team1map1">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map1">0</span>
-               <strong>Map 2</strong> - <span align="center" class="text" id="0team1map2">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map2">0</span>
-               <strong>Map 3</strong> - <span align="center" class="text" id="0team1map3">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map3">0</span>          </div>
+              <p><span align="center" class="style1" id="0team1score">0</span>  <span align="center" class="style1"">:</span>  <span align="center" class="style1" id="0team2score">0</span>              </p>
+              <p>&nbsp;</p>
+            <table width="302" border="1">
+              <tr>
+                   <td width="106"><div align="center"><strong>Map 1</strong></div></td>
+                <td width="180"><div align="center"><span align="center" class="text" id="0team1map1"> 0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map1">0</span></div></td>
+              </tr>
+                 <tr>
+                   <td><div align="center"><strong>Map 2</strong></div></td>
+                   <td><div align="center"><span align="center" class="text" id="0team1map2">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map2">0</span></div></td>
+                 </tr>
+                 <tr>
+                   <td><div align="center"><strong>Map 3</strong></div></td>
+                   <td><div align="center"><span align="center" class="text" id="0team1map3">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map3">0</span></div></td>
+                 </tr>
+            </table>
+               <p>&nbsp;</p>
+          </div>
             <!-- /.box-body -->
             <div class="box-footer">
-            <div align="center">ETA<div id="0time_until_live"></div>
+            <div align="center"><div id="0eta"></div>
               
                 
               </div>
             </div><!-- /.box-footer-->
           </div>
-          
-          
-  <!--card 1 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="1team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="1team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="1time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-   <!--card 2 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="2team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="2team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="2time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-  <!--card 3 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="3team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="3team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="3time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-  <!--card 4 -->    
- 
- <div class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="4team1"></h3>  <strong>VS</strong>   <h3 class="box-title"><div id="4team2"></h3></center>
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-          <div class="box-body">
-              <div align="center"><span class="badge bg-red">BO3</span>
-              </div>
-              <div align="center" class="style1">0:0</div>
-              <div align="center">Map:
-              TBA</div>
-          </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center">ETA<div id="4time_until_live"></div>
-              
-                
-              </div>
-            </div><!-- /.box-footer-->
-          </div>
-          
-          
-          
-                            
-            </div><!-- /.col -->
+</div>
+<!--card 1 -->
+<!--card 2 -->
+<!--card 3 -->
+        </div>
+        <!-- /.col -->
           </div><!-- /.row -->
           <div class="row">
             <div class="col-xs-12">
@@ -340,8 +228,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
                     <p>Will be 23 on April 24th</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <i class="menu-icon fa fa-user bg-yellow"></i>
@@ -349,8 +236,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
                     <p>New phone +1(800)555-1234</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
@@ -358,8 +244,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
                     <p>nora@example.com</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <i class="menu-icon fa fa-file-code-o bg-green"></i>
@@ -367,8 +252,7 @@ function loadJSON()
                     <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
                     <p>Execution time 5 seconds</p>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
             </ul><!-- /.control-sidebar-menu -->
 
             <h3 class="control-sidebar-heading">Tasks Progress</h3>
@@ -377,46 +261,38 @@ function loadJSON()
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                  </h4>
+                    <span class="label label-danger pull-right">70%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Update Resume
-                    <span class="label label-success pull-right">95%</span>
-                  </h4>
+                    <span class="label label-success pull-right">95%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-success" style="width: 95%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Laravel Integration
-                    <span class="label label-warning pull-right">50%</span>
-                  </h4>
+                    <span class="label label-warning pull-right">50%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
               <li>
                 <a href="javascript::;">
                   <h4 class="control-sidebar-subheading">
                     Back End Framework
-                    <span class="label label-primary pull-right">68%</span>
-                  </h4>
+                    <span class="label label-primary pull-right">68%</span>                  </h4>
                   <div class="progress progress-xxs">
                     <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
                   </div>
-                </a>
-              </li>
+                </a>              </li>
             </ul><!-- /.control-sidebar-menu -->
 
           </div><!-- /.tab-pane -->

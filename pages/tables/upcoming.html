@@ -72,7 +72,9 @@ function loadJSON()
         // jsonObj variable now contains the data structure and can
         // be accessed as jsonObj.name and jsonObj.country.
 	// GAME 0
+
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
+
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
 		document.getElementById("0time_until_live").innerHTML = jsonObj.results[0].time_until_live;
 		document.getElementById("0time").innerHTML = jsonObj.results[0].time
@@ -203,7 +205,9 @@ function loadJSON()
     
 <div class="box box-default collapsed-box box-solid">
           <div class="box-header with-border">
-                  <h3 class="box-title"><div id="0team1"></h3> <h3 class="box-title style2">VS</h3> 
+
+
+  <h3 class="box-title"><div id="0team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="0team2"></h3>
                   <div class="box-tools pull-right">
                    <span id="0time_until_live">ETA</span>
