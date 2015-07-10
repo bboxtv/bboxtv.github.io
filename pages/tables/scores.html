@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
+
+ 
   <head>
+
     <meta charset="UTF-8">
     <title>AdminLTE 2 | Simple Tables</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -16,8 +19,10 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
          folder instead of downloading all of them to reduce the load. -->
     <link href="../../dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
-    
+      
+      
 
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,11 +36,6 @@
     </style>
 </head>
   
-  <div class="wrapper">
-
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
         
 <body onLoad="loadJSON()">
 <script type="application/javascript">
@@ -82,54 +82,59 @@ function loadJSON()
         document.getElementById("0team1map3").innerHTML = jsonObj.results[0].team1map3;
 		document.getElementById("0team2map3").innerHTML = jsonObj.results[0].team2map3;
 		document.getElementById("0eta").innerHTML = jsonObj.results[0].eta;
+				document.getElementById("0time").innerHTML = jsonObj.results[0].time;
 
-	
+	// GAME 1
+        document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
+        document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
+        document.getElementById("1team1score").innerHTML = jsonObj.results[1].team1score;
+		document.getElementById("1team2score").innerHTML = jsonObj.results[1].team2score;
+		document.getElementById("1team1map1").innerHTML = jsonObj.results[1].team1map1;
+		document.getElementById("1team2map1").innerHTML = jsonObj.results[1].team2map1;
+		document.getElementById("1team1map2").innerHTML = jsonObj.results[1].team1map2;
+		document.getElementById("1team2map2").innerHTML = jsonObj.results[1].team2map2;
+        document.getElementById("1team1map3").innerHTML = jsonObj.results[1].team1map3;
+		document.getElementById("1team2map3").innerHTML = jsonObj.results[1].team2map3;
+		document.getElementById("1eta").innerHTML = jsonObj.results[1].eta;
+						document.getElementById("1time").innerHTML = jsonObj.results[1].time;
+		
+			// GAME 2
+        document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
+        document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
+        document.getElementById("2team1score").innerHTML = jsonObj.results[2].team1score;
+		document.getElementById("2team2score").innerHTML = jsonObj.results[2].team2score;
+		document.getElementById("2team1map1").innerHTML = jsonObj.results[2].team1map1;
+		document.getElementById("2team2map1").innerHTML = jsonObj.results[2].team2map1;
+		document.getElementById("2team1map2").innerHTML = jsonObj.results[2].team1map2;
+		document.getElementById("2team2map2").innerHTML = jsonObj.results[2].team2map2;
+        document.getElementById("2team1map3").innerHTML = jsonObj.results[2].team1map3;
+		document.getElementById("2team2map3").innerHTML = jsonObj.results[2].team2map3;
+		document.getElementById("2eta").innerHTML = jsonObj.results[2].eta;
+					document.getElementById("2time").innerHTML = jsonObj.results[2].time;	
+		
+					// GAME 3
+        document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
+        document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
+        document.getElementById("3team1score").innerHTML = jsonObj.results[3].team1score;
+		document.getElementById("3team2score").innerHTML = jsonObj.results[3].team2score;
+		document.getElementById("3team1map1").innerHTML = jsonObj.results[3].team1map1;
+		document.getElementById("3team2map1").innerHTML = jsonObj.results[3].team2map1;
+		document.getElementById("3team1map2").innerHTML = jsonObj.results[3].team1map2;
+		document.getElementById("3team2map2").innerHTML = jsonObj.results[3].team2map2;
+        document.getElementById("3team1map3").innerHTML = jsonObj.results[3].team1map3;
+		document.getElementById("3team2map3").innerHTML = jsonObj.results[3].team2map3;
+		document.getElementById("3eta").innerHTML = jsonObj.results[3].eta;
+				document.getElementById("3time").innerHTML = jsonObj.results[3].time;
       }
    }
    http_request.open("GET", data_file, true);
    http_request.send();
 }
-</script>         
-                        
-                       
-                      
-        
-                    
-                   
-            
-  <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group"><span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-              <input type="text" name="q" class="form-control" placeholder="Search..." />
-            </div>
-</form>
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-<li class="treeview">
-          <ul>
-            <li class="header"></li>
-          </ul>
-<li class="treeview">
-<li class="treeview">
-              
-              <ul class="treeview-menu">
-               
-            <li><a href="../../documentation/index.html"><i class="fa fa-book"></i></a></li>
-            <li class="header"></li>
-          </ul>
-</section>
-        <!-- /.sidebar -->
-      </aside>
 
-      <!-- Content Wrapper. Contains page content -->
+
+</script>         
+ 
+<!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -146,73 +151,193 @@ function loadJSON()
               <!-- /.box -->
             </div>
             <!-- /.col -->
+            
+            
+<!-- ----------------------------------------------------------------------------------------------card 0 -->
             <div class="col-md-6">
               <!-- /.box -->
               <!-- /.box -->
               
               
-    <!--card 0 -->
+
 <div class="box">
             <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="0team1"></h3>  <strong>VS</strong> <h3 class="box-title"><div id="0team2"></h3></center>
+             <center><h3 class="box-title"><div id="0team1"></h3>     <!--team1 --> 
+             <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
+             <div id="0team2"></h3></center>						<!--team2 --> 
+             
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
               </div>
             </div>
+            
           <div class="box-body">
-            <center><h5 class="box-title"><div id="0tourny"></h5>
+            <center>
               <div align="center"><span class="badge bg-red">BO3</span>
               </div>
-              <p><span align="center" class="style1" id="0team1score">0</span>  <span align="center" class="style1"">:</span>  <span align="center" class="style1" id="0team2score">0</span>              </p>
-              <p>&nbsp;</p>
-            <table width="302" border="1">
-              <tr>
-                   <td width="106"><div align="center"><strong>Map 1</strong></div></td>
-                <td width="180"><div align="center"><span align="center" class="text" id="0team1map1"> 0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map1">0</span></div></td>
-              </tr>
-                 <tr>
-                   <td><div align="center"><strong>Map 2</strong></div></td>
-                   <td><div align="center"><span align="center" class="text" id="0team1map2">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map2">0</span></div></td>
-                 </tr>
-                 <tr>
-                   <td><div align="center"><strong>Map 3</strong></div></td>
-                   <td><div align="center"><span align="center" class="text" id="0team1map3">0</span> <span align="center" class="text">:</span> <span align="center" class="text" id="0team2map3">0</span></div></td>
-                 </tr>
-            </table>
-               <p>&nbsp;</p>
-          </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-            <div align="center"><div id="0eta"></div>
+              <p><span align="center" class="style1" id="0team1score">0</span>  <!--team1 overall score --> 
+              <span align="center" class="style1"">:</span>  					 <!-- : divder--> 
+              <span align="center" class="style1" id="0team2score">0</span>    <!--team2 overall score --> 
               
+
+            <div id="0map1"><strong>Map 1-</strong> <span id="0team1map1">Loading</span> <span>:</span> <span id="0team2map1"></span></div>
+             
+                 <div id="0map2"><strong>Map 2-</strong> <span id="0team1map2">Loading</span> <span>:</span> <span id="0team2map2"></span></div>
+                   
+				 <div id="0map3"><strong>Map 3-</strong> <span id="0team1map3">Loading</span> <span>:</span> <span id="0team2map3"></span></div>
+              
+
+    </div>
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center"><div id="0eta">Loading..</div>
+              <div id="0time">Loading..</div>
                 
               </div>
             </div><!-- /.box-footer-->
           </div>
 </div>
-<!--card 1 -->
-<!--card 2 -->
-<!--card 3 -->
-        </div>
-        <!-- /.col -->
-          </div><!-- /.row -->
-          <div class="row">
-            <div class="col-xs-12">
-              <!-- /.box -->
-            </div>
-          </div>
-        </section><!-- /.content -->
-      </div><!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.0
-        </div>
-  </footer>
 
-<!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-<div class="control-sidebar-bg"></div>
-  </div><!-- ./wrapper -->
+<!-- ----------------------------------------------------------------------------------------------card 1 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="1team1"></h3>     <!--team1 --> 
+             <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
+             <div id="1team2"></h3></center>						<!--team2 --> 
+             
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            
+          <div class="box-body">
+            <center>
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <p><span align="center" class="style1" id="1team1score">0</span>  <!--team1 overall score --> 
+              <span align="center" class="style1"">:</span>  					 <!-- : divder--> 
+              <span align="center" class="style1" id="1team2score">0</span>    <!--team2 overall score --> 
+              
+
+            <div id="1map1"><strong>Map 1-</strong> <span id="1team1map1">Loading</span> <span>:</span> <span id="1team2map1"></span></div>
+             
+                 <div id="1map2"><strong>Map 2-</strong> <span id="1team1map2">Loading</span> <span>:</span> <span id="1team2map2"></span></div>
+                   
+				 <div id="1map3"><strong>Map 3-</strong> <span id="1team1map3">Loading</span> <span>:</span> <span id="1team2map3"></span></div>
+              
+
+    </div>
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center"><div id="1eta">Loading..</div>
+               <div id="1time">Loading..</div>
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+</div>
+
+
+<!-- ----------------------------------------------------------------------------------------------card 2 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="2team1"></h3>     <!--team1 --> 
+             <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
+             <div id="2team2"></h3></center>						<!--team2 --> 
+             
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            
+          <div class="box-body">
+            <center>
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <p><span align="center" class="style1" id="2team1score">0</span>  <!--team1 overall score --> 
+              <span align="center" class="style1"">:</span>  					 <!-- : divder--> 
+              <span align="center" class="style1" id="2team2score">0</span>    <!--team2 overall score --> 
+              
+
+            <div id="2map1"><strong>Map 1-</strong> <span id="2team1map1">Loading</span> <span>:</span> <span id="2team2map1"></span></div>
+             
+                 <div id="2map2"><strong>Map 2-</strong> <span id="2team1map2">Loading</span> <span>:</span> <span id="2team2map2"></span></div>
+                   
+				 <div id="2map3"><strong>Map 3-</strong> <span id="2team1map3">Loading</span> <span>:</span> <span id="2team2map3"></span></div>
+              
+
+    </div>
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center"><div id="2eta">Loading..</div>
+               <div id="2time">Loading..</div>
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+</div>
+
+
+<!-- ----------------------------------------------------------------------------------------------card 3 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div class="box">
+            <div class="box-header with-border">
+             <center><h3 class="box-title"><div id="3team1"></h3>     <!--team1 --> 
+             <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
+             <div id="3team2"></h3></center>						<!--team2 --> 
+             
+              <div class="box-tools pull-right">
+                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            
+          <div class="box-body">
+            <center>
+              <div align="center"><span class="badge bg-red">BO3</span>
+              </div>
+              <p><span align="center" class="style1" id="3team1score">0</span>  <!--team1 overall score --> 
+              <span align="center" class="style1"">:</span>  					 <!-- : divder--> 
+              <span align="center" class="style1" id="3team2score">0</span>    <!--team2 overall score --> 
+              
+
+            <div id="3map1"><strong>Map 1-</strong> <span id="3team1map1">Loading</span> <span>:</span> <span id="3team2map1"></span></div>
+             
+                 <div id="3map2"><strong>Map 2-</strong> <span id="3team1map2">Loading</span> <span>:</span> <span id="3team2map2"></span></div>
+                   
+				 <div id="3map3"><strong>Map 3-</strong> <span id="3team1map3">Loading</span> <span>:</span> <span id="3team2map3"></span></div>
+              
+
+    </div>
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center"><div id="3eta">Loading..</div>
+               <div id="3time">Loading..</div>
+                
+              </div>
+            </div><!-- /.box-footer-->
+          </div>
+</div>
+<!--card 4 -->
+<!--card 5 -->
+
+<!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
     <script src="../../plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
@@ -226,8 +351,65 @@ function loadJSON()
     <script src="../../dist/js/app.min.js" type="text/javascript"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js" type="text/javascript"></script>
+<!-- angular js added by moe-->
+ <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+<!-- ---------------------------------hide script------------------------------------ -->
+
+
+<script type="application/javascript">
+$( document ).ready(function() {
+setTimeout(
+  function() 
+  
+  
+<!--------------------------------------------------------------------------------------------------------------cards-->  
+  {
+if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
+                            $('#3map3').hide();
+} if($("#3team1map2:contains('undefined')").length) {
+                            $('#3map2').hide();
+} if($("#3team1map1:contains('undefined')").length) {
+                            $('#3map1').hide();
+} if($("#3eta:contains('undefined')").length) {
+                            $('#3eta').hide();
+} if($("#2team1map3:contains('undefined')").length) {     <!-- card 2-->
+                            $('#2map3').hide();
+} if($("#2team1map2:contains('undefined')").length) {
+                            $('#2map2').hide();
+} if($("#2team1map1:contains('undefined')").length) {
+                            $('#2map1').hide();
+} if($("#2eta:contains('undefined')").length) {
+                            $('#2eta').hide();
+} if($("#1team1map3:contains('undefined')").length) {     <!-- card 1-->
+                            $('#1map3').hide();
+} if($("#1team1map2:contains('undefined')").length) {
+                            $('#1map2').hide();
+} if($("#1team1map1:contains('undefined')").length) {
+                            $('#1map1').hide();
+} if($("#1eta:contains('undefined')").length) {
+                            $('#1eta').hide();
+} if($("#0team1map3:contains('undefined')").length) {     <!-- card 0-->
+                            $('#0map3').hide();
+} if($("#0team1map2:contains('undefined')").length) {
+                            $('#0map2').hide();
+} if($("#0team1map1:contains('undefined')").length) {
+                            $('#0map1').hide();
+} if($("#0eta:contains('undefined')").length) {
+                            $('#0eta').hide();
+} 
+    
+
+  
+   }, 2000);
+ });                       
+</script>
+   
+   
+    
+<!-- ---------------------------------end script------------------------------------ -->   
     
     
-    
-  </body>
+</body>
 </html>
