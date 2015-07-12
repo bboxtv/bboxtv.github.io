@@ -160,7 +160,7 @@ setInterval(loadJSON, 30000 );
               
               
 
-<div class="box">
+<div id="card0" class="box">
             <div class="box-header with-border">
              <center><h3 class="box-title"><div id="0team1"></h3>     <!--team1 --> 
              <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
@@ -205,7 +205,7 @@ setInterval(loadJSON, 30000 );
               
               
 
-<div class="box">
+<div id="1card" class="box">
             <div class="box-header with-border">
              <center><h3 class="box-title"><div id="1team1"></h3>     <!--team1 --> 
              <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
@@ -253,7 +253,7 @@ setInterval(loadJSON, 30000 );
               
               
 
-<div class="box">
+<div id="2card" class="box">
             <div class="box-header with-border">
              <center><h3 class="box-title"><div id="2team1"></h3>     <!--team1 --> 
              <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
@@ -301,7 +301,7 @@ setInterval(loadJSON, 30000 );
               
               
 
-<div class="box">
+<div id="3card" class="box">
             <div class="box-header with-border">
              <center><h3 class="box-title"><div id="3team1"></h3>     <!--team1 --> 
              <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
@@ -379,7 +379,7 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
 } if($("#3team1map1:contains('undefined')").length) {
                             $('#3map1').hide();
 } if($("#3eta:contains('undefined')").length) {
-                            $('#3eta').hide();
+                            $('#3card').hide();
 } if($("#2team1map3:contains('undefined')").length) {     <!-- card 2-->
                             $('#2map3').hide();
 } if($("#2team1map2:contains('undefined')").length) {
@@ -387,7 +387,7 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
 } if($("#2team1map1:contains('undefined')").length) {
                             $('#2map1').hide();
 } if($("#2eta:contains('undefined')").length) {
-                            $('#2eta').hide();
+                            $('#2card').hide();
 } if($("#1team1map3:contains('undefined')").length) {     <!-- card 1-->
                             $('#1map3').hide();
 } if($("#1team1map2:contains('undefined')").length) {
@@ -395,7 +395,7 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
 } if($("#1team1map1:contains('undefined')").length) {
                             $('#1map1').hide();
 } if($("#1eta:contains('undefined')").length) {
-                            $('#1eta').hide();
+                            $('#1card').hide();
 } if($("#0team1map3:contains('undefined')").length) {    <!-- card 0-->
                             $('#0map3').hide();
 } if($("#0team1map2:contains('undefined')").length) {
@@ -403,7 +403,7 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
 } if($("#0team1map1:contains('undefined')").length) {
                             $('#0map1').hide();
 } if($("#0eta:contains('undefined')").length) {
-                            $('#0eta').hide();
+                            $('#0card').hide();
 }    
 
 <!--- ------------------------------------------------------------image stuff ------------------------------------->
@@ -418,6 +418,9 @@ $("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text() +'.png');
 
 $("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text() +'.png');
 $("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text() +'.png');
+
+<!-- --------------------------------------------------hide not live ---------------------------------------------->
+
    }, 2000);
  });                       
 </script>
