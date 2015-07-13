@@ -138,10 +138,10 @@ setInterval(loadJSON, 30000 );
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <div class="alert alert-info alert-dismissable">
+          <div id="nolivegames" style="display:none" class="alert alert-info alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <h4><i class="icon fa fa-info"></i> No need to refresh!</h4>
-                    Live scores are updated automatically.</div>
+                    <h4><i class="icon fa fa-info"></i> No Current Live Games</h4>
+                    Check the matches page for upcoming games.</div>
         </section>
 
         <!-- Main content -->
@@ -160,20 +160,28 @@ setInterval(loadJSON, 30000 );
               
               
 
-<div id="card0" class="box">
-            <div class="box-header with-border">
-             <center><h3 class="box-title"><div id="0team1"></h3>     <!--team1 --> 
-             <strong>VS</strong> <h3 class="box-title">   				<!--vs --> 
-             <div id="0team2"></h3></center>						<!--team2 --> 
-             
-              <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-              </div>
-            </div>
-            
-          <div class="box-body">
+<div id="0card" class="box">
+  <div class="box-body">
             <center>
-              <div align="center"><span class="badge bg-red">BO3</span>
+              <div align="center">
+                <div class="box-header with-border">
+                  <center>
+                    <h3 class="box-title">
+                      <div id="0team1">
+                    </h3>
+                    <!--team1 -->
+                    <strong>VS</strong>
+                    <h3 class="box-title">
+                      <!--vs -->
+                      <div id="0team2">
+                    </h3>
+                  </center>
+                  <!--team2 -->
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                  </div>
+                </div>
+                <span class="badge bg-red">BO3</span>
               </div>
 <!-- team 1 logo-->   <span><img id="0team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="91" height="91" longdesc="team 1 logo"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span align="center" class="style1" id="0team1score">0</span>  <!--team1 overall score --> 
@@ -404,6 +412,7 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
                             $('#0map1').hide();
 } if($("#0eta:contains('undefined')").length) {
                             $('#0card').hide();
+							$('#nolivegames').show();
 }    
 
 <!--- ------------------------------------------------------------image stuff ------------------------------------->
