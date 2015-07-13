@@ -139,7 +139,6 @@ setInterval(loadJSON, 30000 );
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <div id="nolivegames" style="display:none" class="alert alert-info alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <h4><i class="icon fa fa-info"></i> No Current Live Games</h4>
                     Check the matches page for upcoming games.</div>
         </section>
@@ -412,7 +411,7 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
                             $('#0map1').hide();
 } if($("#0eta:contains('undefined')").length) {
                             $('#0card').hide();
-							$('#nolivegames').show();
+							$('#nolivegames').show(500);
 }    
 
 <!--- ------------------------------------------------------------image stuff ------------------------------------->
