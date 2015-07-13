@@ -201,6 +201,13 @@ function loadJSON()
                     <h4><i class="icon fa fa-info"></i> Live Games</h4>
                     Live scores can be viewed on the scores page!
                   </div>
+                  
+                  <div id="noupcominggames" style="display:none" class="alert alert-info alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-info"></i> No Upcoming Games</h4>
+                    There are currently no CSGO games scheduled for today.
+                  </div>
+                  
           <ol class="breadcrumb">
             <i class="fa fa-dashboard"></i>  Please note matches completed today will be displayed in the results section.</a></li>
           </ol>
@@ -221,7 +228,7 @@ function loadJSON()
               
     <!--card 0 -->
     
-<div class="box box-default collapsed-box">
+<div id="0card" class="box box-default collapsed-box">
           <div class="box-header with-border">
 
 
@@ -241,7 +248,7 @@ function loadJSON()
     
   <!--card 1 -->    
  
- <div class="box box-default collapsed-box">
+ <div id="1card" class="box box-default collapsed-box">
           <div class="box-header with-border">
                   <h3 class="box-title"><div id="1team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="1team2"></h3>
@@ -260,7 +267,7 @@ function loadJSON()
           
    <!--card 2 -->    
  
- <div class="box box-default collapsed-box">
+ <div id="2card" class="box box-default collapsed-box">
           <div class="box-header with-border">
                   <h3 class="box-title"><div id="2team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="2team2"></h3>
@@ -277,7 +284,7 @@ function loadJSON()
               </div>
   <!--card 3 -->    
  
- <div class="box box-default collapsed-box">
+ <div id="3card" class="box box-default collapsed-box">
           <div class="box-header with-border">
                   <h3 class="box-title"><div id="3team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="3team2"></h3>
@@ -296,7 +303,7 @@ function loadJSON()
           
   <!--card 4 -->    
  
- <div class="box box-default collapsed-box">
+ <div id="4card" class="box box-default collapsed-box">
           <div class="box-header with-border">
                   <h3 class="box-title"><div id="4team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="4team2"></h3>
@@ -314,7 +321,7 @@ function loadJSON()
           
    <!--card 5 -->    
  
- <div class="box box-default collapsed-box">
+ <div id="5card" class="box box-default collapsed-box">
           <div class="box-header with-border">
                   <h3 class="box-title"><div id="5team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="5team2"></h3>
@@ -333,7 +340,7 @@ function loadJSON()
               
     <!--card 6 -->    
  
- <div class="box box-default collapsed-box">
+ <div id="6card" class="box box-default collapsed-box">
           <div class="box-header with-border">
                   <h3 class="box-title"><div id="6team1"></h3> <h3 class="box-title style2">VS</h3> 
             <h3 class="box-title"><div id="6team2"></h3>
@@ -450,10 +457,23 @@ if($("#0map1:contains('undefined')").length) {     <!-- card 0-->
 }if($("#6map2:contains('undefined')").length) {     
 							$('#6map2').hide();
 }if($("#6map3:contains('undefined')").length) {     
-							$('#6map3').hide();
+							$('#6map3').hide();   
+}if($("#0time_until_live:contains('undefined')").length) {   <!-- hiding the entire card-->  
+							$('#0card').hide();
+							$('#noupcominggames').show();
+}if($("#1time_until_live:contains('ETA')").length) {   
+							$('#1card').hide();
+}if($("#2time_until_live:contains('ETA')").length) {   
+							$('#2card').hide();
+}if($("#3time_until_live:contains('ETA')").length) {   
+							$('#3card').hide();
+}if($("#4time_until_live:contains('ETA')").length) {   
+							$('#4card').hide();
+}if($("#5time_until_live:contains('ETA')").length) {   
+							$('#5card').hide();
+}if($("#6time_until_live:contains('ETA')").length) {   
+							$('#6card').hide();
 } 
-    
-
   
    }, 2000);
  });                       
