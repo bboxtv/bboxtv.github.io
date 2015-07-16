@@ -426,7 +426,10 @@ $("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text().replace(/[\. ,:-]+/
 $("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text().replace(/[\. ,:-]+/g, "") +'.png');
 $("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 
-<!-- --------------------------------------------------hide not live ---------------------------------------------->
+<!-- -------------------------------------------------no logo replacement---------------------------------------------->
+$("img").error(function () {
+  $(this).unbind("error").attr("src", "teamlogo/noteamlogo.png");
+});
 
    }, 2000);
  });                       
