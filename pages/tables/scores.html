@@ -187,7 +187,7 @@ setInterval(loadJSON, 30000 );
               <span align="center" class="style1"">:</span>  					 <!-- : divder--> 
               <span align="center" class="style1" id="0team2score">0</span>    <!--team2 overall score --> 
               
-<!-- team 2 logo--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><img id="0team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="91" height="91" longdesc="team 1 logo"></span>
+<!-- team 2 logo--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><img id="0team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="91" height="91" longdesc="team 1 logo"></span>
 
       <div id="0map1" ><strong>Map 1-</strong> <span id="0team1map1">Loading</span> <span>:</span> <span id="0team2map1"></span></div>
              
@@ -329,10 +329,8 @@ setInterval(loadJSON, 30000 );
               <span align="center" class="style1" id="3team1score">0</span>  <!--team1 overall score --> 
               <span align="center" class="style1"">:</span>  					 <!-- : divder--> 
               <span align="center" class="style1" id="3team2score">0</span>    <!--team2 overall score --> 
-<!-- team 2 logo--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span><img id="3team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="91" height="91" longdesc="team 1 logo"></span>
-              
-
-            <div id="3map1"><strong>Map 1-</strong> <span id="3team1map1">Loading</span> <span>:</span> <span id="3team2map1"></span></div>
+<!-- team 2 logo--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img id="3team2logo" onerror="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="91" height="91" longdesc="team 1 logo"></span>
+<div id="3map1"><strong>Map 1-</strong> <span id="3team1map1">Loading</span> <span>:</span> <span id="3team2map1"></span></div>
              
                  <div id="3map2"><strong>Map 2-</strong> <span id="3team1map2">Loading</span> <span>:</span> <span id="3team2map2"></span></div>
                    
@@ -416,17 +414,17 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
 }    
 
 <!--- ------------------------------------------------------------image stuff ------------------------------------->
-$("#0team1logo").attr("src",'teamlogo/'+ $('#0team1').text().replace(/\s/g, "") +'.png');
-$("#0team2logo").attr("src",'teamlogo/'+ $('#0team2').text() +'.png');
+$("#0team1logo").attr("src",'teamlogo/'+ $('#0team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#0team2logo").attr("src",'teamlogo/'+ $('#0team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 
-$("#1team1logo").attr("src",'teamlogo/'+ $('#1team1').text() +'.png');
-$("#1team2logo").attr("src",'teamlogo/'+ $('#1team2').text() +'.png');
+$("#1team1logo").attr("src",'teamlogo/'+ $('#1team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#1team2logo").attr("src",'teamlogo/'+ $('#1team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 
-$("#2team1logo").attr("src",'teamlogo/'+ $('#2team1').text() +'.png');
-$("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text() +'.png');
+$("#2team1logo").attr("src",'teamlogo/'+ $('#2team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 
-$("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text() +'.png');
-$("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text() +'.png');
+$("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 
 <!-- --------------------------------------------------hide not live ---------------------------------------------->
 
