@@ -75,7 +75,6 @@ function loadJSON()
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
         document.getElementById("0team1odd").innerHTML = jsonObj.results[0].team1odd;
-		document.getElementById("0team2odd").innerHTML = jsonObj.results[0].team2odd;
         document.getElementById("0bo").innerHTML = jsonObj.results[0].bo;
 		document.getElementById("0tourny").innerHTML = jsonObj.results[0].tourny;
 		document.getElementById("0eta").innerHTML = jsonObj.results[0].eta;
@@ -116,56 +115,54 @@ setInterval(loadJSON, 30000 );
 
 <div id="0card" class="box">
   <div class="box-body">
-            <center>
+
     <div align="center">
                 <div class="box-header with-border">
-                  <center>
-                   <h3>Closes in: <span id="0eta"> <h3 class="box-title">&nbsp;</h3> </span></h3>
-                    <h3 class="box-title">
 
                     </h3>
-                  </center>
                   <!--team2 -->
                   <div class="box-tools pull-right">
                     <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
                   </div>
                 </div>
-                  </div> 
+    </div> 
+    <table width="459" border="0">
+      <tr>
+        <td width="205"><!-- team 1 logo-->   <div align="left"><span><img id="0team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="60" height="60" longdesc="team 1 logo"></span> 
+            <!-- team 1-->
+          <span class="text-black style2" id="0team1">Team 1</span>
+            <!-- team 1 odd-->
+        <span class="style2">(</span><span class="text-black style2" id="0team1odd">%</span><span class="style2">)</span></div></td>
+        <td width="52"><!-- vs -->
+        <div align="center"><span class="style1">VS</span></div><div class="badge bg-red style2" id="0bo">BO</div> </td>
+        <td width="188"><!-- team 2-->
+          <div align="right"><span class="text-black style2" id="0team2">Team 2</span>
+            <!-- team 2 odd-->
+            <span class="style2">(</span><span class="text-black style2" id="0team2odd">%</span><span class="style2">)</span>
+            <!-- team 2 logo--> 
+        <span><img id="0team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="60" height="60" longdesc="team 1 logo"></span></div></td>
+      </tr>
+    </table>
 <br>                
-              
-<!-- team 1 logo-->   <span><img id="0team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="60" height="60" longdesc="team 1 logo"></span> 
-<!-- team 1--><span class="text-black style2" id="0team1">Team 1</span>
-<!-- team 1 odd--><span class="style2">(</span><span class="text-black style2" id="0team1odd">%</span><span class="style2">)</span>
-<br> 
-<br> 
-           
+
+
 <!-- team 1 bar--> <div class="progress">
-      <div id="0team1bar" class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+      <div id="0team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
                       <span class="sr-only">40% Complete (success)</span>
       </div>
       </div>
+     
 
-<!-- vs --><span class="style1">VS</span> <br><span class="badge bg-red style2" id="0bo">BO</span>  <br>
-<br>
-
-      <!-- team 2 bar--> <div class="progress">
-        <div id="0team2bar" class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                      <span class="sr-only">40% Complete (success)</span>
-        </div>
-      </div>
-      
               
-<!-- team 2 logo--> <span><img id="0team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="60" height="60" longdesc="team 1 logo"></span>
 
-<!-- team 2--><span class="text-black style2" id="0team2">Team 2</span>
-<!-- team 2 odd--><span class="style2">(</span><span class="text-black style2" id="0team2odd">%</span><span class="style2">)</span>
      
           <!-- /.box-body -->
             <div class="box-footer">
             <div align="center">
 <div id="0tourny">Tournament</div>
-                
-              </div>
+<span>Closes in: <span id="0eta"></span>
+         
+</div>
             </div><!-- /.box-footer-->
   </div>
 </div>
