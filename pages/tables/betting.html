@@ -3,7 +3,6 @@
 
  
   <head>
-<!-- <meta http-equiv="refresh" content="300" /> -->
     <meta charset="UTF-8">
     <title>AdminLTE 2 | Simple Tables</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -96,6 +95,67 @@ function loadJSON()
         document.getElementById("2bo").innerHTML = jsonObj.results[2].bo;
 		document.getElementById("2tourny").innerHTML = jsonObj.results[2].tourny;
 		document.getElementById("2eta").innerHTML = jsonObj.results[2].eta;	
+	// GAME 3
+        document.getElementById("3team1").innerHTML =  jsonObj.results[3].team1;
+        document.getElementById("3team2").innerHTML = jsonObj.results[3].team2;
+        document.getElementById("3team1odd").innerHTML = jsonObj.results[3].team1odd;
+		document.getElementById("3team2odd").innerHTML = jsonObj.results[3].team2odd;
+        document.getElementById("3bo").innerHTML = jsonObj.results[3].bo;
+		document.getElementById("3tourny").innerHTML = jsonObj.results[3].tourny;
+		document.getElementById("3eta").innerHTML = jsonObj.results[3].eta;			
+	// GAME 4
+        document.getElementById("4team1").innerHTML =  jsonObj.results[4].team1;
+        document.getElementById("4team2").innerHTML = jsonObj.results[4].team2;
+        document.getElementById("4team1odd").innerHTML = jsonObj.results[4].team1odd;
+		document.getElementById("4team2odd").innerHTML = jsonObj.results[4].team2odd;
+        document.getElementById("4bo").innerHTML = jsonObj.results[4].bo;
+		document.getElementById("4tourny").innerHTML = jsonObj.results[4].tourny;
+		document.getElementById("4eta").innerHTML = jsonObj.results[4].eta;			
+		
+			// GAME 5
+        document.getElementById("5team1").innerHTML =  jsonObj.results[5].team1;
+        document.getElementById("5team2").innerHTML = jsonObj.results[5].team2;
+        document.getElementById("5team1odd").innerHTML = jsonObj.results[5].team1odd;
+		document.getElementById("5team2odd").innerHTML = jsonObj.results[5].team2odd;
+        document.getElementById("5bo").innerHTML = jsonObj.results[5].bo;
+		document.getElementById("5tourny").innerHTML = jsonObj.results[5].tourny;
+		document.getElementById("5eta").innerHTML = jsonObj.results[5].eta;		
+		
+			// GAME 6
+        document.getElementById("6team1").innerHTML =  jsonObj.results[6].team1;
+        document.getElementById("6team2").innerHTML = jsonObj.results[6].team2;
+        document.getElementById("6team1odd").innerHTML = jsonObj.results[6].team1odd;
+		document.getElementById("6team2odd").innerHTML = jsonObj.results[6].team2odd;
+        document.getElementById("6bo").innerHTML = jsonObj.results[6].bo;
+		document.getElementById("6tourny").innerHTML = jsonObj.results[6].tourny;
+		document.getElementById("6eta").innerHTML = jsonObj.results[6].eta;		
+		
+			// GAME 7
+        document.getElementById("7team1").innerHTML =  jsonObj.results[7].team1;
+        document.getElementById("7team2").innerHTML = jsonObj.results[7].team2;
+        document.getElementById("7team1odd").innerHTML = jsonObj.results[7].team1odd;
+		document.getElementById("7team2odd").innerHTML = jsonObj.results[7].team2odd;
+        document.getElementById("7bo").innerHTML = jsonObj.results[7].bo;
+		document.getElementById("7tourny").innerHTML = jsonObj.results[7].tourny;
+		document.getElementById("7eta").innerHTML = jsonObj.results[7].eta;		
+		
+			// GAME 8
+        document.getElementById("8team1").innerHTML =  jsonObj.results[8].team1;
+        document.getElementById("8team2").innerHTML = jsonObj.results[8].team2;
+        document.getElementById("8team1odd").innerHTML = jsonObj.results[8].team1odd;
+		document.getElementById("8team2odd").innerHTML = jsonObj.results[8].team2odd;
+        document.getElementById("8bo").innerHTML = jsonObj.results[8].bo;
+		document.getElementById("8tourny").innerHTML = jsonObj.results[8].tourny;
+		document.getElementById("8eta").innerHTML = jsonObj.results[8].eta;		
+		
+			// GAME 9
+        document.getElementById("9team1").innerHTML =  jsonObj.results[9].team1;
+        document.getElementById("9team2").innerHTML = jsonObj.results[9].team2;
+        document.getElementById("9team1odd").innerHTML = jsonObj.results[9].team1odd;
+		document.getElementById("9team2odd").innerHTML = jsonObj.results[9].team2odd;
+        document.getElementById("9bo").innerHTML = jsonObj.results[9].bo;
+		document.getElementById("9tourny").innerHTML = jsonObj.results[9].tourny;
+		document.getElementById("9eta").innerHTML = jsonObj.results[9].eta;		
       }
    }
    http_request.open("GET", data_file, true);
@@ -116,12 +176,8 @@ setInterval(loadJSON, 30000 );
 
         <!-- Main content -->
         <section class="content">
-        <div class="row">
-            <div class="col-md-6"><!-- /.box -->
-              <!-- /.box -->
-            </div>
-            <!-- /.col -->
-            
+
+
             
 <!-- ----------------------------------------------------------------------------------------------card 0 -->
             <div class="col-md-6">
@@ -317,6 +373,459 @@ setInterval(loadJSON, 30000 );
             </div><!-- /.box-footer-->
   </div>
 </div>
+
+<!-- ----------------------------------------------------------------------------------------------card 3 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="3card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="3team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="3team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="3team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="3team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="3team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="3team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="3team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="3team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="3team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="3bo">BO</div>
+<div id="3tourny">Tournament</div>
+<span>Closes in: <span id="3eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------card 4 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="4card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="4team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="4team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="4team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="4team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="4team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="4team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="4team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="4team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="4team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+   
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="4bo">BO</div>
+<div id="4tourny">Tournament</div>
+<span>Closes in: <span id="4eta"></span>
+
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------card 5 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="5card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="5team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="5team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="5team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="5team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="5team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="5team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="5team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="5team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="5team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="5bo">BO</div>
+<div id="5tourny">Tournament</div>
+<span>Closes in: <span id="5eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------card 6 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="6card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="6team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="6team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="6team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="6team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="6team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="6team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="6team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="6team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="6team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="6bo">BO</div>
+<div id="6tourny">Tournament</div>
+<span>Closes in: <span id="6eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------card 7 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="7card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="7team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="7team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="7team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="7team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="7team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="7team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="7team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="7team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="7team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="7bo">BO</div>
+<div id="7tourny">Tournament</div>
+<span>Closes in: <span id="7eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------card 8 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="8card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="8team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="8team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="8team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="8team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="8team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="8team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="8team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="8team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="8team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="8bo">BO</div>
+<div id="8tourny">Tournament</div>
+<span>Closes in: <span id="8eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------card 9 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="9card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="9team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="9team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="9team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="9team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="9team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="9team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="9team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="9team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="9team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="9bo">BO</div>
+<div id="9tourny">Tournament</div>
+<span>Closes in: <span id="9eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
 <!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
@@ -360,6 +869,23 @@ $("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text().replace(/[\. ,:-]+/
 $("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text().replace(/[\. ,:-]+/g, "") +'.png');
 $("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 
+$("#4team1logo").attr("src",'teamlogo/'+ $('#4team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#4team2logo").attr("src",'teamlogo/'+ $('#4team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+
+$("#5team1logo").attr("src",'teamlogo/'+ $('#5team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#5team2logo").attr("src",'teamlogo/'+ $('#5team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+
+$("#6team1logo").attr("src",'teamlogo/'+ $('#6team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#6team2logo").attr("src",'teamlogo/'+ $('#6team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+
+$("#7team1logo").attr("src",'teamlogo/'+ $('#7team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#7team2logo").attr("src",'teamlogo/'+ $('#7team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+
+$("#8team1logo").attr("src",'teamlogo/'+ $('#8team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#8team2logo").attr("src",'teamlogo/'+ $('#8team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+
+$("#9team1logo").attr("src",'teamlogo/'+ $('#9team1').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#9team2logo").attr("src",'teamlogo/'+ $('#9team2').text().replace(/[\. ,:-]+/g, "") +'.png');
 <!-- -------------------------------------------------no logo replacement---------------------------------------------->
 $("img").error(function () {
   $(this).unbind("error").attr("src", "teamlogo/noteamlogo.png");
@@ -369,8 +895,15 @@ $("img").error(function () {
 $('#0team1bar').attr('Style', 'width:' + $('#0team1odd').text());
 $('#1team1bar').attr('Style', 'width:' + $('#1team1odd').text());
 $('#2team1bar').attr('Style', 'width:' + $('#2team1odd').text());
+$('#3team1bar').attr('Style', 'width:' + $('#3team1odd').text());
+$('#4team1bar').attr('Style', 'width:' + $('#4team1odd').text());
+$('#5team1bar').attr('Style', 'width:' + $('#5team1odd').text());
+$('#6team1bar').attr('Style', 'width:' + $('#6team1odd').text());
+$('#7team1bar').attr('Style', 'width:' + $('#7team1odd').text());
+$('#8team1bar').attr('Style', 'width:' + $('#8team1odd').text());
+$('#9team1bar').attr('Style', 'width:' + $('#9team1odd').text());
 <!-- -------------------------------------------------hide cards---------------------------------------------->
-if($("#0eta:contains('undefined')").length) {     <!-- card 3-->
+if($("#0eta:contains('undefined')").length) {     
                             $('#0card').hide();
 							
 } if($("#1eta:contains('undefined')").length) {
@@ -378,6 +911,20 @@ if($("#0eta:contains('undefined')").length) {     <!-- card 3-->
 							
 } if($("#2eta:contains('undefined')").length) {
                             $('#2card').hide();
+} if($("#3eta:contains('undefined')").length) {
+                            $('#3card').hide();
+} if($("#4eta:contains('undefined')").length) {
+                            $('#4card').hide();
+} if($("#5eta:contains('undefined')").length) {
+                            $('#5card').hide();
+} if($("#6eta:contains('undefined')").length) {
+                            $('#6card').hide();
+} if($("#7eta:contains('undefined')").length) {
+                            $('#7card').hide();
+} if($("#8eta:contains('undefined')").length) {
+                            $('#8card').hide();
+} if($("#9eta:contains('undefined')").length) {
+                            $('#9card').hide();
 }
 <!-- -------------------------------------------------update money line---------------------------------------------->
 <!-- card 0-->   
@@ -430,7 +977,127 @@ var cc4 = 1 / cc3
 var cc5 = cc4 - 1
 var cc6 = cc5.toFixed(2);
 $('#2team2moneyodd').text(cc6);
-    
+
+<!-- card 3-->   
+var d1 = $('#3team1odd').text()
+var d2 = parseFloat(d1);
+var d3 = d2 / 100
+var d4 = 1 / d3
+var d5 = d4 - 1
+var d6 = d5.toFixed(2);
+$('#3team1moneyodd').text(d6);
+
+var dd1 = $('#3team2odd').text()
+var dd2 = parseFloat(dd1);
+var dd3 = dd2 / 100
+var dd4 = 1 / dd3
+var dd5 = dd4 - 1
+var dd6 = dd5.toFixed(2);
+$('#3team2moneyodd').text(dd6);
+
+<!-- card 4-->   
+var d1 = $('#4team1odd').text()
+var d2 = parseFloat(d1);
+var d3 = d2 / 100
+var d4 = 1 / d3
+var d5 = d4 - 1
+var d6 = d5.toFixed(2);
+$('#4team1moneyodd').text(d6);
+
+var dd1 = $('#4team2odd').text()
+var dd2 = parseFloat(dd1);
+var dd3 = dd2 / 100
+var dd4 = 1 / dd3
+var dd5 = dd4 - 1
+var dd6 = dd5.toFixed(2);
+$('#4team2moneyodd').text(dd6);
+
+<!-- card 5-->   
+var e1 = $('#5team1odd').text()
+var e2 = parseFloat(e1);
+var e3 = e2 / 100
+var e4 = 1 / e3
+var e5 = e4 - 1
+var e6 = e5.toFixed(2);
+$('#5team1moneyodd').text(e6);
+
+var ee1 = $('#5team2odd').text()
+var ee2 = parseFloat(ee1);
+var ee3 = ee2 / 100
+var ee4 = 1 / ee3
+var ee5 = ee4 - 1
+var ee6 = ee5.toFixed(2);
+$('#5team2moneyodd').text(ee6);
+
+<!-- card 6-->   
+var f1 = $('#6team1odd').text()
+var f2 = parseFloat(f1);
+var f3 = f2 / 100
+var f4 = 1 / f3
+var f5 = f4 - 1
+var f6 = f5.toFixed(2);
+$('#6team1moneyodd').text(f6);
+
+var ff1 = $('#6team2odd').text()
+var ff2 = parseFloat(ff1);
+var ff3 = ff2 / 100
+var ff4 = 1 / ff3
+var ff5 = ff4 - 1
+var ff6 = ff5.toFixed(2);
+$('#6team2moneyodd').text(ff6);
+
+<!-- card 7-->   
+var g1 = $('#7team1odd').text()
+var g2 = parseFloat(g1);
+var g3 = g2 / 100
+var g4 = 1 / g3
+var g5 = g4 - 1
+var g6 = g5.toFixed(2);
+$('#7team1moneyodd').text(g6);
+
+var gg1 = $('#7team2odd').text()
+var gg2 = parseFloat(gg1);
+var gg3 = gg2 / 100
+var gg4 = 1 / gg3
+var gg5 = gg4 - 1
+var gg6 = gg5.toFixed(2);
+$('#7team2moneyodd').text(gg6);
+
+<!-- card 8-->   
+var h1 = $('#8team1odd').text()
+var h2 = parseFloat(h1);
+var h3 = h2 / 100
+var h4 = 1 / h3
+var h5 = h4 - 1
+var h6 = h5.toFixed(2);
+$('#8team1moneyodd').text(h6);
+
+var hh1 = $('#8team2odd').text()
+var hh2 = parseFloat(hh1);
+var hh3 = hh2 / 100
+var hh4 = 1 / hh3
+var hh5 = hh4 - 1
+var hh6 = hh5.toFixed(2);
+$('#8team2moneyodd').text(hh6);
+
+<!-- card 9-->   
+var i1 = $('#9team1odd').text()
+var i2 = parseFloat(i1);
+var i3 = i2 / 100
+var i4 = 1 / i3
+var i5 = i4 - 1
+var i6 = i5.toFixed(2);
+$('#9team1moneyodd').text(i6);
+
+var ii1 = $('#9team2odd').text()
+var ii2 = parseFloat(ii1);
+var ii3 = ii2 / 100
+var ii4 = 1 / ii3
+var ii5 = ii4 - 1
+var ii6 = ii5.toFixed(2);
+$('#9team2moneyodd').text(ii6);
+
+
 <!-- ---------------------------------end script------------------------------------ -->   
        }, 2000);
  });                       
