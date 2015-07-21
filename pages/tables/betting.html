@@ -75,10 +75,27 @@ function loadJSON()
         document.getElementById("0team1").innerHTML =  jsonObj.results[0].team1;
         document.getElementById("0team2").innerHTML = jsonObj.results[0].team2;
         document.getElementById("0team1odd").innerHTML = jsonObj.results[0].team1odd;
+		document.getElementById("0team2odd").innerHTML = jsonObj.results[0].team2odd;
         document.getElementById("0bo").innerHTML = jsonObj.results[0].bo;
 		document.getElementById("0tourny").innerHTML = jsonObj.results[0].tourny;
 		document.getElementById("0eta").innerHTML = jsonObj.results[0].eta;
-	
+	// GAME 1
+        document.getElementById("1team1").innerHTML =  jsonObj.results[1].team1;
+        document.getElementById("1team2").innerHTML = jsonObj.results[1].team2;
+        document.getElementById("1team1odd").innerHTML = jsonObj.results[1].team1odd;
+		document.getElementById("1team2odd").innerHTML = jsonObj.results[1].team2odd;
+        document.getElementById("1bo").innerHTML = jsonObj.results[1].bo;
+		document.getElementById("1tourny").innerHTML = jsonObj.results[1].tourny;
+		document.getElementById("1eta").innerHTML = jsonObj.results[1].eta;	
+		
+	// GAME 2
+        document.getElementById("2team1").innerHTML =  jsonObj.results[2].team1;
+        document.getElementById("2team2").innerHTML = jsonObj.results[2].team2;
+        document.getElementById("2team1odd").innerHTML = jsonObj.results[2].team1odd;
+		document.getElementById("2team2odd").innerHTML = jsonObj.results[2].team2odd;
+        document.getElementById("2bo").innerHTML = jsonObj.results[2].bo;
+		document.getElementById("2tourny").innerHTML = jsonObj.results[2].tourny;
+		document.getElementById("2eta").innerHTML = jsonObj.results[2].eta;	
       }
    }
    http_request.open("GET", data_file, true);
@@ -118,32 +135,35 @@ setInterval(loadJSON, 30000 );
 
     <div align="center">
                 <div class="box-header with-border">
-
-                    </h3>
-                  <!--team2 -->
+                    <!-- team 1-->
+                            <span class="text-black style2" id="0team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="0team2">Team 2</span>
+                    <!--team2 -->
+        </div>
                   <div class="box-tools pull-right">
                     <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
                   </div>
-                </div>
+      </div>
     </div> 
-    <table width="459" border="0">
-      <tr>
-        <td width="205"><!-- team 1 logo-->   <div align="left"><span><img id="0team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="60" height="60" longdesc="team 1 logo"></span> 
-            <!-- team 1-->
-          <span class="text-black style2" id="0team1">Team 1</span>
-            <!-- team 1 odd-->
-        <span class="style2">(</span><span class="text-black style2" id="0team1odd">%</span><span class="style2">)</span></div></td>
-        <td width="52"><!-- vs -->
-        <div align="center"><span class="style1">VS</span></div><div class="badge bg-red style2" id="0bo">BO</div> </td>
-        <td width="188"><!-- team 2-->
-          <div align="right"><span class="text-black style2" id="0team2">Team 2</span>
-            <!-- team 2 odd-->
-            <span class="style2">(</span><span class="text-black style2" id="0team2odd">%</span><span class="style2">)</span>
-            <!-- team 2 logo--> 
-        <span><img id="0team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="60" height="60" longdesc="team 1 logo"></span></div></td>
-      </tr>
-    </table>
-<br>                
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="0team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="0team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="0team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="0team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="0team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="0team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
 
 
 <!-- team 1 bar--> <div class="progress">
@@ -159,6 +179,7 @@ setInterval(loadJSON, 30000 );
           <!-- /.box-body -->
             <div class="box-footer">
             <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="0bo">BO</div>
 <div id="0tourny">Tournament</div>
 <span>Closes in: <span id="0eta"></span>
          
@@ -167,8 +188,135 @@ setInterval(loadJSON, 30000 );
   </div>
 </div>
 
+<!-- ----------------------------------------------------------------------------------------------card 1 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="1card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="1team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="1team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="1team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="1team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="1team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="1team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="1team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="1team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
 
 
+<!-- team 1 bar--> <div class="progress">
+      <div id="1team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="1bo">BO</div>
+<div id="1tourny">Tournament</div>
+<span>Closes in: <span id="1eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------card 2 -->
+            <div class="col-md-6">
+              <!-- /.box -->
+              <!-- /.box -->
+              
+              
+
+<div id="2card" class="box">
+  <div class="box-body">
+
+    <div align="center">
+                <div class="box-header with-border">
+                    <!-- team 1-->
+                            <span class="text-black style2" id="2team1">Team 1</span>
+                    <!-- vs -->
+                              <span class="style1">&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;</span>
+                    <!-- team 2-->
+                            <span class="text-black style2" id="2team2">Team 2</span>
+                    <!--team2 -->
+        </div>
+                  <div class="box-tools pull-right">
+                    <!-- <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button> -->
+                  </div>
+      </div>
+    </div> 
+   <!-- team 1 logo-->   
+   <div align="center">
+     <p><span><img id="2team1logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team1logo" width="80" height="80" longdesc="team 1 logo"></span> 
+       
+        <!-- team 1 odd-->
+          <span class="text-black style2" id="2team1odd">%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <!-- team 2 odd-->
+         <span class="text-black style2" id="2team2odd">%</span>
+        <!-- team 2 logo--> 
+       <span><img id="2team2logo" onError="this.onerror = '';this.src='teamlogo/noteamlogo.png';" src="teamlogo/noteamlogo.png" alt="team2logo" width="80" height="80" longdesc="team 1 logo"></span></p>
+ <!-- odds -->
+<span>$</span><span class="text-black style2" id="2team1moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>$</span><span class="text-black style2" id="2team2moneyodd">0</span>&nbsp;<span>for</span>&nbsp;<span>$</span><span class="text-black style2">1</span>
+   </div>
+   <br>                
+
+
+<!-- team 1 bar--> <div class="progress">
+      <div id="2team1bar" class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      <span class="sr-only">40% Complete (success)</span>
+      </div>
+      </div>
+     
+
+              
+
+     
+          <!-- /.box-body -->
+            <div class="box-footer">
+            <div align="center">
+            <!-- bo--><div class="badge bg-red style2" id="2bo">BO</div>
+<div id="2tourny">Tournament</div>
+<span>Closes in: <span id="2eta"></span>
+         
+</div>
+            </div><!-- /.box-footer-->
+  </div>
+</div>
 <!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
@@ -219,16 +367,74 @@ $("img").error(function () {
 
 <!-- -------------------------------------------------update progress bars---------------------------------------------->
 $('#0team1bar').attr('Style', 'width:' + $('#0team1odd').text());
-$('#0team2bar').attr('Style', 'width:' + $('#0team2odd').text());
+$('#1team1bar').attr('Style', 'width:' + $('#1team1odd').text());
+$('#2team1bar').attr('Style', 'width:' + $('#2team1odd').text());
+<!-- -------------------------------------------------hide cards---------------------------------------------->
+if($("#0eta:contains('undefined')").length) {     <!-- card 3-->
+                            $('#0card').hide();
+							
+} if($("#1eta:contains('undefined')").length) {
+                            $('#1card').hide();
+							
+} if($("#2eta:contains('undefined')").length) {
+                            $('#2card').hide();
+}
+<!-- -------------------------------------------------update money line---------------------------------------------->
+<!-- card 0-->   
+var a1 = $('#0team1odd').text()
+var a2 = parseFloat(a1);
+var a3 = a2 / 100
+var a4 = 1 / a3
+var a5 = a4 - 1
+var a6 = a5.toFixed(2);
+$('#0team1moneyodd').text(a6);
 
-   }, 2000);
- });                       
-</script>
-   
-   
+var aa1 = $('#0team2odd').text()
+var aa2 = parseFloat(aa1);
+var aa3 = aa2 / 100
+var aa4 = 1 / aa3
+var aa5 = aa4 - 1
+var aa6 = aa5.toFixed(2);
+$('#0team2moneyodd').text(aa6);
+
+<!-- card 1-->   
+var b1 = $('#1team1odd').text()
+var b2 = parseFloat(b1);
+var b3 = b2 / 100
+var b4 = 1 / b3
+var b5 = b4 - 1
+var b6 = b5.toFixed(2);
+$('#1team1moneyodd').text(b6);
+
+var bb1 = $('#1team2odd').text()
+var bb2 = parseFloat(bb1);
+var bb3 = bb2 / 100
+var bb4 = 1 / bb3
+var bb5 = bb4 - 1
+var bb6 = bb5.toFixed(2);
+$('#1team2moneyodd').text(bb6);
+
+<!-- card 2-->   
+var c1 = $('#2team1odd').text()
+var c2 = parseFloat(c1);
+var c3 = c2 / 100
+var c4 = 1 / c3
+var c5 = c4 - 1
+var c6 = c5.toFixed(2);
+$('#2team1moneyodd').text(c6);
+
+var cc1 = $('#2team2odd').text()
+var cc2 = parseFloat(cc1);
+var cc3 = cc2 / 100
+var cc4 = 1 / cc3
+var cc5 = cc4 - 1
+var cc6 = cc5.toFixed(2);
+$('#2team2moneyodd').text(cc6);
     
 <!-- ---------------------------------end script------------------------------------ -->   
-    
+       }, 2000);
+ });                       
+</script>
     
 </body>
 </html>
