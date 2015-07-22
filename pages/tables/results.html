@@ -168,7 +168,7 @@ function loadJSON()
                   <h3 class="box-title">Scorecard</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body no-padding">
-                  <table class="table table-striped">
+<table class="table table-striped">
 
                     <tr>
                  <td width="38%"> <p class="box-title"> 
@@ -255,8 +255,8 @@ setInterval(function()
 if($("#0team1score").text() > $("#0team2score").text()) {     
 							$('#0team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
 							$('#0team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
-							
-} if($("#1team1score").text() > $("#1team2score").text()) {     
+											
+} if($("#1team1score").text() < $("#1team2score").text()) {   
 							$('#1team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
 							$('#1team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
 							
@@ -295,5 +295,5 @@ if($("#0team1score").text() > $("#0team2score").text()) {
 <!-- ---------------------------------end script------------------------------------ -->    
    
     
-  </body>
+</body>
 </html>
