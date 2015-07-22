@@ -48,9 +48,7 @@
   
   <div class="wrapper">
 
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
+
         
 <body onLoad="loadJSON()">
 <script type="application/javascript">
@@ -142,48 +140,10 @@ function loadJSON()
 }
 </script>         
                         
-                       
-                      
-        
-                    
-                   
-            
-  <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group"><span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-              <input type="text" name="q" class="form-control" placeholder="Search..." />
-            </div>
-</form>
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header"></li>
-<li class="treeview">
-<li class="treeview">
-<li class="treeview">
-              
-              <ul class="treeview-menu">
-               
-            <li><a href="../../documentation/index.html"><i class="fa fa-book"></i></a></li>
-            <li class="header"></li>
-          </ul>
-</section>
-        <!-- /.sidebar -->
-      </aside>
 
-      <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-       
-          </section>
+
 
         <!-- Main content -->
         <section class="content">
@@ -195,20 +155,10 @@ function loadJSON()
             <div class="col-md-6">
               <!-- /.box -->
               <!-- /.box -->
-              
-              
-    <!--card 0 -->
-    <!--card 1 -->
-    <!--card 2 -->
-    <!--card 3 -->
-    <!--card 4 -->
+
             </div>
             <!-- /.col -->
-          </div><!-- /.row -->
-          <div class="row">
-            <div class="col-xs-12">
-              <!-- /.box -->
-            </div>
+
            
           
           </div>
@@ -219,16 +169,13 @@ function loadJSON()
                 </div><!-- /.box-header -->
                 <div class="box-body no-padding">
                   <table class="table table-striped">
+
                     <tr>
-                      <th width="500"><p align="left">Team</p></th>
-                      <th width="636"><p align="left"><strong>Final Score</strong></p></th>
-                      <th width="93" style="width: 40px">                        <p align="right">Team</p></th>
-                    </tr>
-                    <tr>
-                 <td> <p class="box-title"><div id="0team1"></p></div> 
+                 <td width="38%"> <p class="box-title"> 
+                   <div id="0team1"></p></div> 
          <!-- team 1 logo--></img></td>
-                 <td><h5><span class="badge bg-blue style4" id="0team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="0team2score">0</span></h5></td>
-                 <td> <p align="right" class="box-title"><div id="0team2">
+                 <td width="47%"><h5><span class="badge bg-blue style4" id="0team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="0team2score">0</span></h5></td>
+                 <td width="15%"> <p align="right" class="box-title"><div id="0team2">
                  </p></td>
                     </tr>
                     <tr>
@@ -281,13 +228,7 @@ function loadJSON()
                  </p></td>
                     </tr>
                   </table>
-</div><!-- /.box-body -->
-              </div>
-        </section><!-- /.content -->
-      </div><!-- /.content-wrapper -->
-      <footer class="main-footer"></footer>
 
-     
 
     <!-- jQuery 2.1.4 -->
     <script src="../../plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
@@ -303,7 +244,44 @@ function loadJSON()
     <script src="../../dist/js/demo.js" type="text/javascript"></script>
  
 
+<!-- ---------------------------------hide script------------------------------------ -->
+
+
+<script type="application/javascript">
+$( document ).ready(function() {
+setInterval(function() 
+  
+  
+<!--------------------------------------------------------------------------------------------------------------cards-->  
+  {
+if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
+                            $('#3map3').hide();
+} if($("#3team1map2:contains('undefined')").length) {
+                            $('#3map2').hide();
+} if($("#3team1map1:contains('undefined')").length) {
+                            $('#3map1').hide();
+} if($("#3eta:contains('undefined')").length) {
+                            $('#3card').hide();
+} if($("#2team1map3:contains('undefined')").length) {     <!-- card 2-->
+                            $('#2map3').hide();
+} if($("#2team1map2:contains('undefined')").length) {
+                            $('#2map2').hide();
+} if($("#2team1map1:contains('undefined')").length) {
+                            $('#2map1').hide();
+} if($("#2eta:contains('undefined')").length) {
+                            $('#2card').hide();
+
+}    
+
+
+
+   }, 2000);
+ });                       
+</script>
    
+   
+    
+<!-- ---------------------------------end script------------------------------------ -->      
    
     
   </body>
