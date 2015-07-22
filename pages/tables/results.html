@@ -174,56 +174,56 @@ function loadJSON()
                  <td width="38%"> <p class="box-title"> 
                    <div id="0team1"></p></div> 
          <!-- team 1 logo--></img></td>
-                 <td width="47%"><h5><span class="badge bg-blue style4" id="0team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="0team2score">0</span></h5></td>
+                 <td width="47%"><h5><span class="badge bg-blue style4" id="0team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="0team2score">0</span></h5></td>
                  <td width="15%"> <p align="right" class="box-title"><div id="0team2">
                  </p></td>
                     </tr>
                     <tr>
                  <td> <p class="box-title"><div id="1team1">
                  </p></td>
-                 <td><h5><span class="badge bg-blue style4" id="1team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="1team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="1team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="1team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="1team2">
                  </p></td>
                     </tr>
                     <tr>
 				<td> <p class="box-title"><div id="2team1">
 				</p></td>
-                 <td><h5><span class="badge bg-blue style4" id="2team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="2team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="2team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="2team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="2team2">
                  </p></td>
                     </tr>
                     <tr>
 				<td> <p class="box-title"><div id="3team1">
 				</p></td>
-                 <td><h5><span class="badge bg-blue style4" id="3team1score">0</span><span class="style3">:</span><span class="bg-blue style5" id="3team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="3team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="3team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="3team2">
                  </p></td>
                     </tr>
                     <tr>
 				<td> <p class="box-title"><div id="4team1">
 				</p></td>
-                 <td><h5><span class="badge bg-blue style4" id="4team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="4team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="4team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="4team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="4team2">
                  </p></td>
                     </tr>
                     <tr>
 				<td> <p class="box-title"><div id="5team1">
 				</p></td>
-                 <td><h5><span class="badge bg-blue style4" id="5team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="5team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="5team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="5team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="5team2">
                  </p></td>
                     </tr>
                     <tr>
 				<td> <p class="box-title"><div id="6team1">
 				</p></td>
-                 <td><h5><span class="badge bg-blue style4" id="6team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="6team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="6team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="6team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="6team2">
                  </p></td>
                     </tr>
                     <tr>
 				<td> <p class="box-title"><div id="7team1">
 				</p></td>
-                 <td><h5><span class="badge bg-blue style4" id="7team1score">0</span><span class="style3">:</span><span class="badge bg-blue style4" id="7team2score">0</span></h5></td>
+                 <td><h5><span class="badge bg-blue style4" id="7team1score">0</span><span class="style3">:</span><span class="badge bg-green style4" id="7team2score">0</span></h5></td>
                  <td> <p align="right" class="box-title"><div id="7team2">
                  </p></td>
                     </tr>
@@ -249,39 +249,50 @@ function loadJSON()
 
 <script type="application/javascript">
 $( document ).ready(function() {
-setInterval(function() 
-  
-  
-<!--------------------------------------------------------------------------------------------------------------cards-->  
-  {
-if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
-                            $('#3map3').hide();
-} if($("#3team1map2:contains('undefined')").length) {
-                            $('#3map2').hide();
-} if($("#3team1map1:contains('undefined')").length) {
-                            $('#3map1').hide();
-} if($("#3eta:contains('undefined')").length) {
-                            $('#3card').hide();
-} if($("#2team1map3:contains('undefined')").length) {     <!-- card 2-->
-                            $('#2map3').hide();
-} if($("#2team1map2:contains('undefined')").length) {
-                            $('#2map2').hide();
-} if($("#2team1map1:contains('undefined')").length) {
-                            $('#2map1').hide();
-} if($("#2eta:contains('undefined')").length) {
-                            $('#2card').hide();
+setInterval(function()
 
-}    
+{ 
+if($("#0team1score").text() > $("#0team2score").text()) {     
+							$('#0team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#0team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+} if($("#1team1score").text() > $("#1team2score").text()) {     
+							$('#1team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#1team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+} if($("#2team1score").text() < $("#2team2score").text()) {     
+							$('#2team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#2team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+} if($("#3team1score").text() > $("#3team2score").text()) {     
+							$('#3team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#3team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+} if($("#4team1score").text() > $("#4team2score").text()) {     
+							$('#4team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#4team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
 
+} if($("#5team1score").text() > $("#5team2score").text()) {     
+							$('#5team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#5team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+} if($("#6team1score").text() > $("#6team2score").text()) {     
+							$('#6team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#6team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+} if($("#7team1score").text() < $("#7team2score").text()) {     
+							$('#7team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
+							$('#7team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
+							
+}
 
-
-   }, 2000);
+}, 2000);
  });                       
 </script>
    
    
     
-<!-- ---------------------------------end script------------------------------------ -->      
+<!-- ---------------------------------end script------------------------------------ -->    
    
     
   </body>
