@@ -129,7 +129,7 @@ function loadJSON()
    http_request.open("GET", data_file, true);
    http_request.send();
 }
-setInterval(loadJSON, 30000 );
+setInterval(loadJSON, 60000 );
 
 </script>         
  
@@ -337,9 +337,8 @@ setInterval(loadJSON, 30000 );
             </div><!-- /.box-footer-->
           </div>
 </div>
-<!--card 4 -->
-<!--card 5 -->
 
+<!-- counter--> <center><span id="loading">Loading:</span> <span id="counter"></span></center>
 <!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
@@ -364,10 +363,16 @@ setInterval(loadJSON, 30000 );
 <script type="application/javascript">
 $( document ).ready(function() {
 setInterval(function() 
-  
+{  
+
+if($("#counter:contains('.....')").length) {     
+   $('#counter').hide()
+   $('#loading').hide()
+   return false;
+}
   
 <!--------------------------------------------------------------------------------------------------------------cards-->  
-  {
+  
 if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
                             $('#3map3').hide();
 } if($("#3team1map2:contains('undefined')").length) {
@@ -421,6 +426,13 @@ $("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text().toLowerCase().repla
 $("img").error(function () {
   $(this).unbind("error").attr("src", "teamlogo/noteamlogo.png");
 });
+
+
+<!-- counter -->
+var counter = $('#counter').text()
+var counter2 = counter + '.'
+$('#counter').text(counter2);
+
 
    }, 2000);
  });                       

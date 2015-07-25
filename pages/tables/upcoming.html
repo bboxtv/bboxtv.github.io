@@ -363,7 +363,7 @@ function loadJSON()
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
-
+<!-- counter--> <center><span id="loading">Loading:</span> <span id="counter"></span></center>
       
 
          
@@ -388,10 +388,16 @@ function loadJSON()
 $( document ).ready(function() {
 setInterval(function() 
 
+ {
+if($("#counter:contains('.....')").length) {     
+   $('#counter').hide()
+   $('#loading').hide()
+   return false;
+}
 
   
 <!--------------------------------------------------------------------------------------------------------------cards-->  
-  {
+ 
 if($("#0map1:contains('undefined')").length) {     <!-- card 0-->
                             $('#0map1').hide();
 							$('#0map2').hide();
@@ -498,6 +504,11 @@ $("#6team2logo").attr("src",'teamlogo/'+ $('#6team2').text().toLowerCase().repla
 $("img").error(function () {
   $(this).unbind("error").attr("src", "teamlogo/noteamlogo.png");
 });
+
+<!-- counter -->
+var counter = $('#counter').text()
+var counter2 = counter + '.'
+$('#counter').text(counter2);
 
 
    }, 2000);

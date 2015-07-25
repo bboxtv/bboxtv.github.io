@@ -213,7 +213,7 @@ function loadJSON()
                  <td><strong><div align="center" id="7team2">Team</div></strong><div align="center"><img id="7team2logo" src="teamlogo/noteamlogo.png" width="40" height="40"></div></td>
                     </tr>
 </table>
-
+<!-- counter--> <center><span id="loading">Loading:</span> <span id="counter"></span></center>
 
 <!-- jQuery 2.1.4 -->
     <script src="../../plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
@@ -237,6 +237,15 @@ $( document ).ready(function() {
 setInterval(function()
 
 { 
+
+
+if($("#counter:contains('.....')").length) {     
+   $('#counter').hide()
+   $('#loading').hide()
+   return false;
+}
+
+
 if ($("#0team1score").text() > $("#0team2score").text()) {     
 							$('#0team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
 							$('#0team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
@@ -313,6 +322,12 @@ $("#7team2logo").attr("src",'teamlogo/'+ $('#7team2').text().toLowerCase().repla
 $("img").error(function () {
   $(this).unbind("error").attr("src", "teamlogo/noteamlogo.png");
 });
+
+<!-- counter -->
+var counter = $('#counter').text()
+var counter2 = counter + '.'
+$('#counter').text(counter2);
+
 
 }, 2000);
  });                       

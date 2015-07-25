@@ -43,7 +43,7 @@ function loadJSON()
 {
    var data_file = "https://api.import.io/store/data/dbe59e0b-c8e7-4163-9164-20c8fc910aeb/_query?input/webpage/url=http%3A%2F%2Fcsgolounge.com%2F&_user=71b166e4-3f2d-4e65-bb72-7201cb2c4b25&_apikey=71b166e43f2d4e65bb727201cb2c4b2553b8acda19cd8f18f3c3cb8eff3f721a6878cbcad5d6d0a6f13f2241bac72ddf5ffc8186d987335dcbb4aa29677756e797edfadcc83153d3312fd9017a3fa8c1";
 
-   
+	
    var http_request = new XMLHttpRequest();
    try{
       // Opera 8.0+, Firefox, Chrome, Safari
@@ -160,8 +160,9 @@ function loadJSON()
    }
    http_request.open("GET", data_file, true);
    http_request.send();
+
 }
-setInterval(loadJSON, 30000 );
+<!-- removing this for now setInterval(loadJSON, 30000 ); -->
 
 </script>         
  
@@ -826,6 +827,8 @@ setInterval(loadJSON, 30000 );
             </div><!-- /.box-footer-->
   </div>
 </div>
+<!-- counter--> <center><span id="loading">Loading:</span> <span id="counter"></span></center>
+
 <!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
@@ -844,16 +847,22 @@ setInterval(loadJSON, 30000 );
  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
 
+
 <!-- ---------------------------------hide script------------------------------------ -->
 
 
 <script type="application/javascript">
 $( document ).ready(function() {
 setInterval(function() 
-  
-  
 <!--------------------------------------------------------------------------------------------------------------cards-->  
   {
+
+if($("#counter:contains('.....')").length) {     
+   $('#counter').hide()
+   $('#loading').hide()
+   return false;
+}
+
 
 
 <!--- ------------------------------------------------------------image stuff ------------------------------------->
@@ -1097,10 +1106,14 @@ var ii5 = ii4 - 1
 var ii6 = ii5.toFixed(2);
 $('#9team2moneyodd').text(ii6);
 
-
+<!-- counter -->
+var counter = $('#counter').text()
+var counter2 = counter + '.'
+$('#counter').text(counter2);
 <!-- ---------------------------------end script------------------------------------ -->   
        }, 2000);
- });                       
+ }); 
+                    
 </script>
     
 </body>
