@@ -404,17 +404,18 @@ if($("#3team1map3:contains('undefined')").length) {     <!-- card 3-->
 }    
 
 <!--- ------------------------------------------------------------image stuff ------------------------------------->
-$("#0team1logo").attr("src",'teamlogo/'+ $('#0team1').text().replace(/[\. ,:-]+/g, "") +'.png');
-$("#0team2logo").attr("src",'teamlogo/'+ $('#0team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#0team1logo").attr("src",'teamlogo/'+ $('#0team1').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
+$("#0team2logo").attr("src",'teamlogo/'+ $('#0team2').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
 
-$("#1team1logo").attr("src",'teamlogo/'+ $('#1team1').text().replace(/[\. ,:-]+/g, "") +'.png');
-$("#1team2logo").attr("src",'teamlogo/'+ $('#1team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#1team1logo").attr("src",'teamlogo/'+ $('#1team1').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
+$("#1team2logo").attr("src",'teamlogo/'+ $('#1team2').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
 
-$("#2team1logo").attr("src",'teamlogo/'+ $('#2team1').text().replace(/[\. ,:-]+/g, "") +'.png');
-$("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#2team1logo").attr("src",'teamlogo/'+ $('#2team1').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
+$("#2team2logo").attr("src",'teamlogo/'+ $('#2team2').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
 
-$("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text().replace(/[\. ,:-]+/g, "") +'.png');
-$("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text().replace(/[\. ,:-]+/g, "") +'.png');
+$("#3team1logo").attr("src",'teamlogo/'+ $('#3team1').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
+$("#3team2logo").attr("src",'teamlogo/'+ $('#3team2').text().toLowerCase().replace(/[\. ,:-]+/g, "") +'.png');
+
 
 <!-- -------------------------------------------------no logo replacement---------------------------------------------->
 $("img").error(function () {
