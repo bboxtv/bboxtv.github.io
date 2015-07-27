@@ -159,10 +159,8 @@ function loadJSON()
             </div>
             <!-- /.col -->
 
-           
-          
           </div>
-          
+
           <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Scorecard</h3>
@@ -236,17 +234,14 @@ function loadJSON()
 $( document ).ready(function() {
 setInterval(function()
 
-{ 
-
-
-if($("#counter:contains('.....')").length) {     
+{ if($("#counter:contains('.....')").length) {     
    $('#counter').hide()
    $('#loading').hide()
    return false;
-}
 
 
-if ($("#0team1score").text() > $("#0team2score").text()) {     
+
+} if ($("#0team1score").text() > $("#0team2score").text()) {     
 							$('#0team1score').removeClass('badge bg-blue style4').addClass('badge bg-green style4');
 							$('#0team2score').removeClass('badge bg-green style4').addClass('badge bg-blue style4');
 							$('#0team1').css({ 'font-weight': 'bold' });
