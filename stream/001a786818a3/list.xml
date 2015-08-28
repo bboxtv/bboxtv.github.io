@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
  <item>
      <title>NFL Network</title>
@@ -9,5 +9,11 @@
    <item>
      <title>NFL RedZone - Starts Sept.6</title>
      <link>http://nflsvglagame2-i.akamaihd.net/hls/live/223207-b/NFL_Mobile/RdZnMobile_5000k.m3u8</link>
+     <thumbnail>http://icons.iconarchive.com/icons/astahrr/nfl/128/NFL-icon.png</thumbnail>
+  </item>
+
+   <item>
+     <title>CIN@TB Mon 8:00</title>
+     <link>http://nflsvglagame2-i.akamaihd.net/hls/live/223207-b/NFL_Mobile/2015082451_5000k.m3u8</link>
      <thumbnail>http://icons.iconarchive.com/icons/astahrr/nfl/128/NFL-icon.png</thumbnail>
   </item>
