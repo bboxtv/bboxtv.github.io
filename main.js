@@ -99,7 +99,7 @@ function populateGrid(workbook) {
 function importExcel() {
   makeRequest(
     'GET',
-    'https://github.com/bboxtv/bboxtv.github.io/raw/main/olympic-data.xlsx',
+    'https://github.com/bboxtv/bboxtv.github.io/raw/c69e41cab84186a1286e08a76a0514c728e7f0ed/olympic-data.xlsx',
     // success
     function (data) {
       var workbook = convertDataToWorkbook(data);
